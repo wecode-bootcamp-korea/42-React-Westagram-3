@@ -1,0 +1,602 @@
+.navBar {
+  border-bottom: solid 2px #eeeeee;
+  display: flex;
+  justify-content: space-around;
+
+  .leftImg {
+    margin-bottom: 35px;
+
+    .logo {
+      width: 50px;
+    }
+
+    .bar {
+      width: 15px;
+      height: 50px;
+    }
+
+    .westagram {
+      display: inline;
+      font-family: 'Lobster', cursive;
+      font-size: 80px;
+    }
+  }
+
+  .search {
+    margin-top: 30px;
+    display: inline;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    .searchBar {
+      width: 300px;
+      height: 50px;
+      border-radius: 5px;
+      border: 2px solid #dbdbdb;
+      text-align: center;
+      background-color: #fafafa;
+      font-size: 20px;
+    }
+
+    .searchImg {
+      width: 50px;
+      position: absolute;
+      top: 1px;
+      right: 180px;
+    }
+  }
+
+  .rightImg {
+    display: inline;
+    margin-top: 30px;
+
+    .rightImage {
+      width: 60px;
+      margin-right: 30px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  background-color: #fafafa;
+  justify-content: center;
+
+  .leftSection {
+    margin-left: 100px;
+    margin-right: 1px;
+
+    .title {
+      display: flex;
+      margin-top: 50px;
+      border: 2px solid #dbdbdb;
+      background-color: white;
+      justify-content: space-between;
+      margin-right: 0px;
+      width: 800px;
+
+      .imgId {
+        .titleImg {
+          margin-left: 20px;
+          margin-top: 10px;
+          width: 50px;
+          height: 50px;
+          border-radius: 70%;
+          overflow: hidden;
+        }
+      }
+
+      .userId {
+        font-weight: 800;
+        margin-top: 20px;
+        margin-right: 550px;
+        text-align: left;
+      }
+
+      .more {
+        width: 40px;
+        margin-right: 20px;
+      }
+    }
+    .feedandMention {
+      border: 2px solid #dbdbdb;
+      width: 800px;
+      background-color: white;
+
+      .feedImg {
+        width:797px;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-start;
+
+        .feedBtn {
+          .feedBtnImg {
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+          }
+        }
+        .bookmark {
+          width: 50px;
+          height: 50px;
+          margin-left: 510px;
+        }
+      }
+
+      .comment {
+        .like {
+          display: flex;
+          align-content: center;
+          margin-top: 20px;
+          margin-left: 25px;
+
+          .commentImg {
+            width: 30px;
+            height: 30px;
+            border-radius: 70%;
+            overflow: hidden;
+          }
+
+          .likeEach {
+            margin-left: 10px;
+          }
+        }
+
+        .post {
+          display: flex;
+          margin-top: 20px;
+          margin-left: 25px;
+
+          .moreBtn {
+            margin-left: 0px;
+            border-width: 0px;
+            color: gray;
+            font-size: 15px;
+            background-color: #fafafa;
+            margin-bottom: 10px;
+          }
+        }
+
+        .mention {
+          margin-left: 25px;
+          display: flex;
+          justify-content: space-between;
+
+          .like {
+            width: 20px;
+            height: 20px;
+            margin-right: 25px;
+            margin-top: 2px;
+          }
+        }
+
+        .lastHour {
+          margin-left: 25px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .makeMention {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 2px solid #dbdbdb;
+
+    .writeMention {
+      width: 450px;
+      height: 30px;
+      border-width: 0px;
+      background-color: transparent;
+      color: gray;
+      margin-left: 20px;
+    }
+
+    .writeBtn {
+      border-width: 0px;
+      color: #bcd5f0;
+      font-size: 15px;
+      font-weight: 700;
+      background-color: transparent;
+      margin-right: 20px;
+    }
+  }
+
+  .rightSection {
+    margin-left: 100px;
+    width: 300px;
+    margin-top: 47px;
+
+    .aside {
+      .myProfile {
+        display: flex;
+        .profileImage {
+          .profileImg {
+            width: 70px;
+            height: 70px;
+            border-radius: 70%;
+            overflow: hidden;
+          }
+        }
+        .profileId {
+          margin-top: 12px;
+          font-size: 15px;
+          margin-left: 10px;
+          font-weight: 800;
+          .introduce {
+            color: gray;
+          }
+        }
+      }
+
+      .storyBox {
+        height: 230px;
+        background-color: white;
+        border: 1px solid lightgray;
+        margin-top: 15px;
+        padding: 20px;
+        font-size: 15px;
+        overflow: scroll;
+
+        .storyTitle {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 15px;
+          margin-bottom: 10px;
+
+          .story {
+            color: gray;
+          }
+
+          .lookall {
+            border-width: 0px;
+            font-size: 15px;
+            font-weight: 700;
+            background-color: white;
+          }
+        }
+        .storyList {
+          .listWrap {
+            padding-left: 0px;
+            .list {
+              list-style: none;
+
+              .storyProfile {
+                display: flex;
+                .storyImg {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(to right, red 0%, orange 100%);
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .storyUser {
+                    width: 100%;
+                  }
+                }
+                .userInfo {
+                  margin-left: 0px;
+                  margin-top: 8px;
+                  .userId {
+                    font-weight: 700;
+                    font-size: 15px;
+                  }
+                  .storyTime {
+                    color: gray;
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+            .list1 {
+              list-style: none;
+
+              .storyProfile1 {
+                display: flex;
+                .storyIcon1 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(to right, red 0%, orange 100%);
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .storyIcon_img_1 {
+                    width: 100%;
+                  }
+                }
+                .userInfo1 {
+                  margin-left: 0px;
+                  margin-top: 8px;
+                  .userId1 {
+                    font-weight: 700;
+                    font-size: 15px;
+                  }
+                  .userTime1 {
+                    color: gray;
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+            .list2 {
+              list-style: none;
+              .storyProfile2 {
+                display: flex;
+                .storyIcon2 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(to right, red 0%, orange 100%);
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .storyIcon_img_2 {
+                    width: 100%;
+                  }
+                }
+                .userInfo2 {
+                  .userId2 {
+                    font-weight: 700;
+                    font-size: 15px;
+                  }
+                  .userTime2 {
+                    color: gray;
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+            .list3 {
+              list-style: none;
+              .storyProfile3 {
+                display: flex;
+                .storyIcon3 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(to right, red 0%, orange 100%);
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .storyIcon_img_3 {
+                    width: 100%;
+                  }
+                }
+                .userInfo3 {
+                  .userId3 {
+                    font-weight: 700;
+                    font-size: 15px;
+                  }
+                  .userTime3 {
+                    color: gray;
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+            .list4 {
+              list-style: none;
+              .storyProfile4 {
+                display: flex;
+                .storyIcon4 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(to right, red 0%, orange 100%);
+                  background-origin: border-box;
+                  background-clip: content-box, border-box;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .storyIcon_img_4 {
+                    width: 100%;
+                  }
+                }
+                .userInfo4 {
+                  .userId4 {
+                    font-weight: 700;
+                    font-size: 15px;
+                  }
+                  .userTime4 {
+                    color: gray;
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .recommendBox {
+        height: 223px;
+        background-color: white;
+        border: 1px solid lightgray;
+        margin-top: 15px;
+        padding: 20px;
+        margin-bottom: 10px;
+
+        .recommendTop {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 0px;
+          padding-bottom: 10px;
+          .recommendTopLeft {
+            font-size: 15px;
+            color: gray;
+          }
+          .recommendTopRight {
+            border-width: 0px;
+            font-size: 15px;
+            font-weight: 700;
+            background-color: transparent;
+          }
+        }
+        .recommendBottom {
+          display: flex;
+          flex-direction: column;
+          .recommendList {
+            .recoList1 {
+              .recommendProfile1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 50px;
+                .recommendIcon1 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .recommendIcon_img_1 {
+                    width: 100%;
+                  }
+                }
+                .recommendInfo1 {
+                  font-size: 15px;
+                  margin-left: 0px;
+                  .recommendId1 {
+                    font-weight: 800;
+                  }
+                  .recommendPeople1 {
+                    color: gray;
+                  }
+                }
+                .recommendFollow1 {
+                  margin-left: auto;
+                  font-size: 15px;
+                  font-weight: 700;
+                  color: cornflowerblue;
+                  border-width: 0px;
+                  background-color: transparent;
+                }
+              }
+            }
+            .recoList2 {
+              .recommendProfile2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 50px;
+                .recommendIcon2 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .recommendIcon_img_2 {
+                    width: 100%;
+                  }
+                }
+                .recommendInfo2 {
+                  font-size: 15px;
+                  margin-left: 0px;
+                  .recommendId2 {
+                    font-weight: 800;
+                  }
+                  .recommendPeople2 {
+                    color: gray;
+                  }
+                }
+                .recommendFollow2 {
+                  margin-left: auto;
+                  font-size: 15px;
+                  font-weight: 700;
+                  color: cornflowerblue;
+                  border-width: 0px;
+                  background-color: transparent;
+                }
+              }
+            }
+            .recoList3 {
+              .recommendProfile3 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 50px;
+                .recommendIcon3 {
+                  position: relative;
+                  width: 35px;
+                  height: 35px;
+                  margin: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  margin-left: 0px;
+                  .recommendIcon_img_3 {
+                    width: 100%;
+                  }
+                }
+                .recommendInfo3 {
+                  font-size: 15px;
+                  margin-left: 0px;
+                  .recommendId3 {
+                    font-weight: 800;
+                  }
+                  .recommendPeople {
+                    color: gray;
+                  }
+                }
+                .recommendFollow3 {
+                  margin-left: auto;
+                  font-size: 15px;
+                  font-weight: 700;
+                  color: cornflowerblue;
+                  border-width: 0px;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+      .info {
+        height: 100px;
+        font-size: 13px;
+        color: gray;
+        margin-top: 15px;
+        display: inline;
+        .watermark {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
