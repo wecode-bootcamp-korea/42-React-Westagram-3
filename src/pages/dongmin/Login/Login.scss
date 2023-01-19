@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-cnt {
+  @include flexColumn;
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  background-color: white;
+  border: 2px solid rgb(227, 227, 227);
+
+  h1 {
+    background-color: white;
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+  }
+
+  .input-cnt {
+    @include flexColumn;
+    margin-top: 10px;
+    background-color: white;
+
+    input {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid rgb(244, 244, 244);
+      border-radius: 5px;
+    }
+
+    .input-pw {
+      margin-top: 10px;
+    }
+
+    button {
+      width: 300px;
+      height: 35px;
+      margin-top: 15px;
+      color: white;
+      background-color: rgb(196, 225, 250);
+      border: 0;
+      border-radius: 4px;
+      font-size: 15px;
+
+      &:hover {
+        opacity: 0.8;
+        cursor: point;
+      }
+    }
+
+    a {
+      position: absolute;
+      bottom: 20px;
+      color: rgb(0, 38, 111);
+      background-color: white;
+      text-decoration: none;
+    }
+  }
+}
