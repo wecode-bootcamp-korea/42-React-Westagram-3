@@ -1,0 +1,143 @@
+.feeds {
+  padding-bottom: 20px;
+
+  article {
+    border: 2px solid rgb(245, 245, 245);
+    padding-top: 5px;
+    background-color: white;
+  }
+
+  .profile-cnt {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .profile-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .profile-text li:nth-child(1) {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .profile-text li:nth-child(2) {
+    font-size: 1px;
+    margin: 0;
+  }
+
+  .feeds-img-cnt {
+    width: 500px;
+    height: 500px;
+  }
+
+  .feeds-img {
+    width: 100%;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+  }
+
+  .button-cnt {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-cnt {
+    display: flex;
+  }
+
+  .article-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .like-cnt {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .like-profile-cnt {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    overflow: hidden;
+  }
+
+  .like-profile-img {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 50%;
+    margin-right: 2px;
+  }
+
+  .like-profile-text {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .like-amount-zero {
+    display: none;
+  }
+
+  .like-amount-not-zero {
+    display: relative;
+  }
+
+  .name-content-cnt {
+    display: flex;
+    width: 495px;
+    height: 15px;
+    margin-left: 5px;
+    .name {
+      font-size: 13px;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+    .content {
+      font-size: 13px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  hr {
+    margin-top: 5px;
+    opacity: 0.5;
+  }
+
+  .input-cnt {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+  }
+
+  .input-cnt input {
+    width: 100%;
+    margin-left: 5px;
+    border: none;
+  }
+
+  .input-cnt button {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    color: skyblue;
+    border: none;
+  }
+
+  .input-cnt button:hover {
+    color: blue;
+  }
+}
