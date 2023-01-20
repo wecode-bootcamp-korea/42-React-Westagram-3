@@ -85,7 +85,7 @@ const Feeds = () => {
           </span>
         </div>
         <div>
-          <ul className="comment-li"></ul>
+          <ul className="comment-li" />
         </div>
         <hr />
         <div className="input-cnt">

@@ -145,11 +145,13 @@ const MainRight = () => {
             </li>
             <li>
               <div className="side-profile-cnt">
-                <img
-                  className="side-profile-img"
-                  alt="logo"
-                  src={process.env.PUBLIC_URL + '/images/dongmin/soohyun.png'}
-                />
+                <div className="box">
+                  <img
+                    className="side-profile-img"
+                    alt="logo"
+                    src={process.env.PUBLIC_URL + '/images/dongmin/soohyun.png'}
+                  />
+                </div>
                 <ul className="side-profile-text">
                   <li>watervillage.kim</li>
                   <li>dongmin.lee 외 2명이 알고 있을지도 모르고 있을지도</li>

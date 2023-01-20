@@ -6,36 +6,43 @@
   align-items: center;
 }
 
-.main-cnt {
-  @include flexColumn;
-  width: 400px;
-  height: 500px;
-  margin: 100px auto;
-  background-color: white;
-  border: 2px solid rgb(227, 227, 227);
-
-  h1 {
-    background-color: white;
-    font-size: 60px;
-    font-family: 'Lobster', cursive;
-    text-align: center;
-  }
-
-  .input-cnt {
+.login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  .page-cnt {
     @include flexColumn;
-    margin-top: 10px;
+    width: 400px;
+    height: 500px;
     background-color: white;
+    border: 2px solid rgb(227, 227, 227);
 
-    input {
-      width: 300px;
-      height: 40px;
-      padding: 10px;
-      border: 1px solid rgb(244, 244, 244);
-      border-radius: 5px;
+    h1 {
+      margin: 40px 0;
+      background-color: white;
+      font-size: 60px;
+      font-family: 'Lobster', cursive;
+      text-align: center;
     }
 
-    .input-pw {
+    .input-cnt {
+      @include flexColumn;
       margin-top: 10px;
+      background-color: white;
+
+      input {
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 5px;
+      }
+
+      .input-pw {
+        margin-top: 10px;
+      }
     }
 
     button {
@@ -43,7 +50,7 @@
       height: 35px;
       margin-top: 15px;
       color: white;
-      background-color: rgb(196, 225, 250);
+      background-color: rgb(0, 149, 246);
       border: 0;
       border-radius: 4px;
       font-size: 15px;
@@ -52,11 +59,15 @@
         opacity: 0.8;
         cursor: point;
       }
+
+      &:disabled {
+        opacity: 0.3;
+      }
     }
 
     a {
       position: absolute;
-      bottom: 20px;
+      bottom: 30px;
       color: rgb(0, 38, 111);
       background-color: white;
       text-decoration: none;
