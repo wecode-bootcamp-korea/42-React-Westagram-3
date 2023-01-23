@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Feeds.scss';
+import CommentsList from './CommentsList/CommentsList';
 
 const Feeds = () => {
+  const [input, setInput] = useState('');
+  const comment = { name: 'gmgmgun', content: input };
+  const [commentsList, setCommentsList] = useState([]);
+  const changeInput = e => {
+    setInput(e.target.value);
+  };
+  const addComment = newComment => {
+    setCommentsList(commentsList.concat(newComment));
+  };
+  const onBtnClicked = () => {
+    addComment(comment);
+    setInput('');
+  };
   return (
     <div className="feeds">
       <article>
@@ -85,7 +99,9 @@ const Feeds = () => {
           </span>
         </div>
         <div>
-          <ul className="comment-li" />
+          {commentsList.map((el, idx) => (
+            <CommentsList key={idx} name={el.name} content={el.content} />
+          ))}
         </div>
         <hr />
         <div className="input-cnt">
@@ -93,8 +109,10 @@ const Feeds = () => {
             className="input-comment"
             type="text"
             placeholder="댓글 달기.."
+            onChange={changeInput}
+            value={input}
           />
-          <button className="submit">게시</button>
+          <button onClick={onBtnClicked}>게시</button>
         </div>
       </article>
     </div>

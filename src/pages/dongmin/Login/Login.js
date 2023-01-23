@@ -38,11 +38,7 @@ const Login = () => {
             onChange={changePw}
           />
         </div>
-        <button
-          className={isValid ? 'button-abled' : 'button-disabled'}
-          onClick={onClickButton}
-          disabled={!isValid}
-        >
+        <button onClick={onClickButton} disabled={!isValid}>
           로그인
         </button>
         <a href="https://www.instagram.com/accounts/password/reset/">
