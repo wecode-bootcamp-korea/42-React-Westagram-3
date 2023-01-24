@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
 import './Feeds.scss';
-import CommentsList from './CommentsList/CommentsList';
+import Comment from './Comment/Comment';
 
 const Feeds = () => {
   const [input, setInput] = useState('');
-  const comment = { name: 'gmgmgun', content: input };
   const [commentsList, setCommentsList] = useState([]);
   const changeInput = e => {
     setInput(e.target.value);
   };
+
   const addComment = newComment => {
     setCommentsList(commentsList.concat(newComment));
   };
-  const onBtnClicked = () => {
+
+  const deleteComment = idxOfBeingDeleted => {
+    setCommentsList(
+      commentsList.filter((el, idx) => {
+        return idx !== idxOfBeingDeleted;
+      })
+    );
+  };
+
+  const onSubmit = e => {
+    const comment = { name: 'gmgmgun', content: input };
     addComment(comment);
     setInput('');
+    e.preventDefault();
   };
+
   return (
     <div className="feeds">
       <article>
@@ -99,12 +111,20 @@ const Feeds = () => {
           </span>
         </div>
         <div>
-          {commentsList.map((el, idx) => (
-            <CommentsList key={idx} name={el.name} content={el.content} />
-          ))}
+          <ul>
+            {commentsList.map((el, idx) => (
+              <Comment
+                key={idx}
+                index={idx}
+                name={el.name}
+                content={el.content}
+                deleteCommentFunc={deleteComment}
+              />
+            ))}
+          </ul>
         </div>
         <hr />
-        <div className="input-cnt">
+        <form onSubmit={onSubmit} className="input-cnt">
           <input
             className="input-comment"
             type="text"
@@ -112,8 +132,8 @@ const Feeds = () => {
             onChange={changeInput}
             value={input}
           />
-          <button onClick={onBtnClicked}>게시</button>
-        </div>
+          <button type="submit">게시</button>
+        </form>
       </article>
     </div>
   );
