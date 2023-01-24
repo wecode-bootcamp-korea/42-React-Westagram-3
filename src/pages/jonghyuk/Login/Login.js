@@ -11,17 +11,17 @@ function Login() {
     navigate('/main-jonghyuk');
   };
 
-  const [idValue, setIdvalue] = useState(' ');
-
+  const [id, setId] = useState(' ');
   const saveUserId = event => {
-    setIdvalue(event.target.value);
+    setId(event.target.value);
   };
 
-  const [pwValue, setPWvalue] = useState(' ');
-
-  const saveUserPW = event => {
-    setPWvalue(event.target.value);
+  const [pw, setPw] = useState(' ');
+  const saveUserPw = event => {
+    setPw(event.target.value);
   };
+
+  const isDisabled = id.includes('@') && pw.length >= 5;
 
   return (
     <div className="login">
@@ -35,13 +35,18 @@ function Login() {
             className="login"
           />
           <input
-            onChange={saveUserPW}
+            onChange={saveUserPw}
             type="password"
             placeholder="비밀번호"
             id="pw"
             className="login"
           />
-          <button id="loginBtn" className="login" onClick={goToMain}>
+          <button
+            id={isDisabled ? 'loginBtn' : 'loginDisabled'}
+            className="login"
+            onClick={goToMain}
+            disabled={isDisabled ? false : true}
+          >
             로그인
           </button>
         </div>
