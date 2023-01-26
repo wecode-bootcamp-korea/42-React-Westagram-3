@@ -1,19 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
+import Newcomment from './Newcomment';
 
 const Comment = () => {
   const [comment, setComment] = useState('');
   const hendleComment = event => {
-    const { value } = event.target;
-    setComment(value);
+    //const { value } = event.target;
+    //setComment(value);
+    setComment(event.target.value);
   };
   const [commentArray, setCommentArray] = useState([]);
   const eventComment = () => {
     const result = [...commentArray];
     result.push(comment);
+    //setComment(...commentArray);
     setCommentArray(result);
     setComment('');
   };
+
+  const changeColor = comment.length > 0;
 
   return (
     <div className="comment">
@@ -46,7 +51,7 @@ const Comment = () => {
       <div className="lastHour">42분 전</div>
       <ul className="comment-ul">
         {commentArray.map(function (a, i) {
-          return <p>{commentArray[i]}</p>;
+          return <Newcomment key={i} comment={a} />;
         })}
       </ul>
       <div className="makeMention">
@@ -58,7 +63,7 @@ const Comment = () => {
           onChange={hendleComment}
         />
         <input
-          className="writeBtn"
+          className={changeColor ? 'changeColorBtn' : 'writeBtn'}
           type="button"
           value="게시"
           onClick={eventComment}

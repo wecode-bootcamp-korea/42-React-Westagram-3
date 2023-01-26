@@ -48,7 +48,6 @@ const Leftsection = () => {
         </div>
         <Comment />
       </div>
-      {/* <Mention /> */}
     </section>
   );
 };
