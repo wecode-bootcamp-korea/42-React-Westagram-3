@@ -2,7 +2,7 @@ import React from 'react';
 import './Comment.scss';
 
 const Comment = props => {
-  const { key, index, name, content, deleteCommentFunc } = props;
+  const { index, name, content, deleteCommentFunc } = props;
 
   const isHeartEmpty = src => (src.indexOf('empty') !== -1 ? true : false);
 
