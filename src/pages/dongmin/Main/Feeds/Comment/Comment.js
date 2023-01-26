@@ -4,6 +4,7 @@ import './Comment.scss';
 const Comment = props => {
   const { index, name, content, deleteCommentFunc } = props;
 
+  // const createCommentID
   const isHeartEmpty = src => (src.indexOf('empty') !== -1 ? true : false);
 
   const onBtnClickedLike = e => {

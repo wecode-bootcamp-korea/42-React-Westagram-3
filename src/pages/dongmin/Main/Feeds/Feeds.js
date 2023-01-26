@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import './Feeds.scss';
 import Comment from './Comment/Comment';
+import { v4 as uuidv4 } from 'uuid';
 
 const Feeds = () => {
   const [input, setInput] = useState('');
   const [commentsList, setCommentsList] = useState([]);
   const changeInput = e => {
     setInput(e.target.value);
-  };
-
-  const addComment = newComment => {
-    setCommentsList(commentsList.concat(newComment));
   };
 
   const deleteComment = idxOfBeingDeleted => {
@@ -23,7 +20,7 @@ const Feeds = () => {
 
   const onSubmit = e => {
     const comment = { name: 'gmgmgun', content: input };
-    addComment(comment);
+    setCommentsList(commentsList.concat(comment));
     setInput('');
     e.preventDefault();
   };
@@ -89,7 +86,6 @@ const Feeds = () => {
             </button>
           </div>
         </div>
-
         <div id="like-amount" className="like-amount-not-zero">
           <div className="like-cnt">
             <div className="like-profile-cnt">
@@ -114,7 +110,7 @@ const Feeds = () => {
           <ul>
             {commentsList.map((el, idx) => (
               <Comment
-                key={idx}
+                key={uuidv4()}
                 index={idx}
                 name={el.name}
                 content={el.content}
