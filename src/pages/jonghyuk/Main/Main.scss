@@ -176,6 +176,10 @@
         .lastHour {
           margin-left: 25px;
           margin-bottom: 10px;
+          color: gray;
+        }
+        .comment-ul{
+          margin-left: 25px;
         }
       }
     }
@@ -203,6 +207,7 @@
       font-weight: 700;
       background-color: transparent;
       margin-right: 20px;
+      cursor: pointer;
     }
   }
 
