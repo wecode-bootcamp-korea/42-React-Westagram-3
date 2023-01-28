@@ -1,0 +1,36 @@
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 495px;
+  height: 15px;
+  margin-left: 5px;
+  padding-right: 5px;
+  .name {
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .content {
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .btn-cnt {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    .like {
+      width: 13px;
+      height: 13px;
+      margin-right: 3px;
+    }
+    .delete {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

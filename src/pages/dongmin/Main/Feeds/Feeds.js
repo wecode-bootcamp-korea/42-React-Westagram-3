@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
 import './Feeds.scss';
 import Comment from './Comment/Comment';
+import { v4 as uuidv4 } from 'uuid';
 
 const Feeds = () => {
   const [input, setInput] = useState('');
+  const [commentsList, setCommentsList] = useState([]);
   const changeInput = e => {
     setInput(e.target.value);
   };
+
+  const deleteComment = idxOfBeingDeleted => {
+    setCommentsList(
+      commentsList.filter((el, idx) => {
+        return idx !== idxOfBeingDeleted;
+      })
+    );
+  };
+
+  const onSubmit = e => {
+    const comment = { name: 'gmgmgun', content: input };
+    setCommentsList(commentsList.concat(comment));
+    setInput('');
+    e.preventDefault();
+  };
+
   return (
     <div className="feeds">
       <article>
@@ -68,7 +86,6 @@ const Feeds = () => {
             </button>
           </div>
         </div>
-
         <div id="like-amount" className="like-amount-not-zero">
           <div className="like-cnt">
             <div className="like-profile-cnt">
@@ -90,20 +107,37 @@ const Feeds = () => {
           </span>
         </div>
         <div>
+<<<<<<< HEAD
           <ul className="comment-li">
             <Comment content="input-cnt" change={input} />
+=======
+          <ul>
+            {commentsList.map((el, idx) => (
+              <Comment
+                key={uuidv4()}
+                index={idx}
+                name={el.name}
+                content={el.content}
+                deleteCommentFunc={deleteComment}
+              />
+            ))}
+>>>>>>> 5858798a243dca3a578eecdead3c33179f108319
           </ul>
         </div>
         <hr />
-        <div className="input-cnt">
+        <form onSubmit={onSubmit} className="input-cnt">
           <input
             className="input-comment"
             type="text"
             placeholder="댓글 달기.."
             onChange={changeInput}
+<<<<<<< HEAD
+=======
+            value={input}
+>>>>>>> 5858798a243dca3a578eecdead3c33179f108319
           />
-          <button className="submit">게시</button>
-        </div>
+          <button type="submit">게시</button>
+        </form>
       </article>
     </div>
   );
