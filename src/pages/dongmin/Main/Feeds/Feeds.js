@@ -107,10 +107,6 @@ const Feeds = () => {
           </span>
         </div>
         <div>
-<<<<<<< HEAD
-          <ul className="comment-li">
-            <Comment content="input-cnt" change={input} />
-=======
           <ul>
             {commentsList.map((el, idx) => (
               <Comment
@@ -121,7 +117,6 @@ const Feeds = () => {
                 deleteCommentFunc={deleteComment}
               />
             ))}
->>>>>>> 5858798a243dca3a578eecdead3c33179f108319
           </ul>
         </div>
         <hr />
@@ -131,10 +126,7 @@ const Feeds = () => {
             type="text"
             placeholder="댓글 달기.."
             onChange={changeInput}
-<<<<<<< HEAD
-=======
             value={input}
->>>>>>> 5858798a243dca3a578eecdead3c33179f108319
           />
           <button type="submit">게시</button>
         </form>
