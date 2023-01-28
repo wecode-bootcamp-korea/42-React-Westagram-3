@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Feeds.scss';
+import Comment from './Comment/Comment';
 
 const Feeds = () => {
+  const [input, setInput] = useState('');
+  const changeInput = e => {
+    setInput(e.target.value);
+  };
   return (
     <div className="feeds">
       <article>
@@ -85,7 +90,9 @@ const Feeds = () => {
           </span>
         </div>
         <div>
-          <ul className="comment-li" />
+          <ul className="comment-li">
+            <Comment content="input-cnt" change={input} />
+          </ul>
         </div>
         <hr />
         <div className="input-cnt">
@@ -93,6 +100,7 @@ const Feeds = () => {
             className="input-comment"
             type="text"
             placeholder="댓글 달기.."
+            onChange={changeInput}
           />
           <button className="submit">게시</button>
         </div>
