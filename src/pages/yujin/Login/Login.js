@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.scss';
 
 function Login() {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
+  const [isActive, setIsActive] = useState(false);
 
   const saveUserId = event => {
     setId(event.target.value);
@@ -12,6 +13,14 @@ function Login() {
   const saveUserPw = event => {
     setPassword(event.target.value);
   };
+
+  useEffect(() => {
+    if (id.indexOf('@') >= 0 && password.length >= 5) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  }, [id, password]);
 
   return (
     <div className="container">
@@ -38,7 +47,11 @@ function Login() {
           onChange={saveUserPw}
           value={password}
         />
-        <button type="submit" className="login_btn">
+        <button
+          type="submit"
+          className={`login_btn ${isActive ? 'active' : ''}`}
+          disabled={!isActive}
+        >
           로그인
         </button>
         <div className="passwordForgot">비밀번호를 잊으셨나요?</div>
