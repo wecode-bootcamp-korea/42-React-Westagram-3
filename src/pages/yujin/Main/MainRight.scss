@@ -1,0 +1,67 @@
+// .story {
+//   position: relative;
+//   left: 650px;
+//   top: -650px;
+//   margin-left: 70%;
+//   background-color: rgb(212, 127, 127);
+//   width: 30%;
+//   height: 60%;
+// }
+
+.story_list {
+  width: 30%;
+  height: 100%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  margin-left: 60%;
+  margin-right: 10%;
+  background-color: pink;
+  list-style: none;
+}
+
+.story_box {
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+}
+
+.profile_image {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+.user_id {
+  margin-top: -7%;
+  margin-left: 20%;
+}
+
+.story_time {
+  margin-top: -7%;
+  margin-left: 60%;
+}
+
+.story_text {
+  color: gray;
+  margin-left: 5%;
+  padding-top: 5%;
+}
+
+.view_all_story {
+  margin-top: -3%;
+  margin-left: 80%;
+}
+
+.suggest {
+  width: 30%;
+  height: 40%;
+  margin-left: 60%;
+  background-color: blanchedalmond;
+  list-style: none;
+}
