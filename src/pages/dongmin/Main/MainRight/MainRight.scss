@@ -1,21 +1,21 @@
-.main-right {
+.mainRight {
   margin-left: 2px;
   width: 200px;
   height: 300px;
   background-color: rgb(250, 250, 250);
 
-  .profile-cnt {
+  .profileCnt {
     display: flex;
     align-items: center;
     height: 28px;
     overflow: hidden;
-    .profile-img {
+    .profileImg {
       width: 25px;
       height: 25px;
       border-radius: 50%;
       margin-right: 5px;
     }
-    .profile-text li {
+    .profileText li {
       &:nth-child(1) {
         font-size: 12px;
       }
@@ -25,7 +25,7 @@
     }
   }
 
-  .story-wrap {
+  .storyWrap {
     position: relative;
     border: 2px solid rgb(245, 245, 245);
     height: 200px;
@@ -38,7 +38,7 @@
       display: none;
     }
 
-    .show-all {
+    .showAll {
       top: 5px;
       right: 5px;
       position: absolute;
@@ -46,21 +46,21 @@
       font-weight: 700;
     }
 
-    .story-li {
-      .side-profile-cnt {
+    .storyLi {
+      .sideProfileCnt {
         display: flex;
         align-items: center;
         height: 35px;
         overflow: hidden;
 
-        .side-profile-img {
+        .sideProfileImg {
           width: 30px;
           height: 30px;
           margin-right: 7px;
           border-radius: 50%;
         }
 
-        .side-profile-text {
+        .sideProfileText {
           display: block;
           overflow: hidden;
 
@@ -83,7 +83,7 @@
     }
   }
 
-  .recommend-wrap {
+  .recommendWrap {
     position: relative;
     border: 2px solid rgb(245, 245, 245);
     height: 200px;
@@ -96,7 +96,7 @@
       display: none;
     }
 
-    .show-all {
+    .showAll {
       top: 5px;
       right: 5px;
       position: absolute;
@@ -104,21 +104,21 @@
       font-weight: 700;
     }
 
-    .story-li {
-      .side-profile-cnt {
+    .storyLi {
+      .sideProfileCnt {
         display: flex;
         align-items: center;
         height: 35px;
         overflow: hidden;
 
-        .side-profile-img {
+        .sideProfileImg {
           width: 30px;
           height: 30px;
           margin-right: 7px;
           border-radius: 50%;
         }
 
-        .side-profile-text {
+        .sideProfileText {
           display: block;
           overflow: hidden;
 
@@ -149,7 +149,7 @@
     li {
       float: left;
       margin: 0;
-      font-size: 5px;
+      font-size: 11px;
 
       &::after {
         content: '•';

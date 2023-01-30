@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Feeds.scss';
-import Comment from './Comment/Comment';
+import Comment from './Components/Comment';
 import { v4 as uuidv4 } from 'uuid';
 
 const Feeds = () => {
@@ -28,30 +28,30 @@ const Feeds = () => {
   return (
     <div className="feeds">
       <article>
-        <div className="profile-cnt">
+        <div className="profileCnt">
           <img
-            className="profile-img"
+            className="profileImg"
             alt="logo"
             src="/images/dongmin/wecode.png"
           />
-          <ul className="profile-text">
+          <ul className="profileText">
             <li>wecode_bootcamp</li>
             <li>WeCode - 위코드</li>
           </ul>
         </div>
-        <div className="feeds-img-cnt">
+        <div className="feedsImgCnt">
           <img
-            className="feeds-img"
+            className="feedsImg"
             alt="focus"
             src="/images/dongmin/feed.jpg"
           />
         </div>
-        <div className="button-cnt">
-          <ul className="icon-cnt">
+        <div className="btnCnt">
+          <ul className="iconCnt">
             <li>
-              <button className="heart-button">
+              <button className="heartButton">
                 <img
-                  className="article-icon"
+                  className="articleIcon"
                   alt="logo"
                   src="/images/dongmin/empty-heart.png"
                 />
@@ -60,7 +60,7 @@ const Feeds = () => {
             <li>
               <button>
                 <img
-                  className="article-icon"
+                  className="articleIcon"
                   alt="logo"
                   src="/images/dongmin/chat.png"
                 />
@@ -69,37 +69,37 @@ const Feeds = () => {
             <li>
               <button>
                 <img
-                  className="article-icon"
+                  className="articleIcon"
                   alt="logo"
                   src="/images/dongmin/upload.png"
                 />
               </button>
             </li>
           </ul>
-          <div className="icon-cnt">
+          <div className="iconCnt">
             <button>
               <img
-                className="article-icon"
+                className="articleIcon"
                 alt="logo"
                 src="/images/dongmin/bookmark.png"
               />
             </button>
           </div>
         </div>
-        <div id="like-amount" className="like-amount-not-zero">
-          <div className="like-cnt">
-            <div className="like-profile-cnt">
+        <div id="likeAmount" className="likeAmountNotZero">
+          <div className="likeCnt">
+            <div className="likeProfileCnt">
               <img
-                className="like-profile-img"
+                className="likeProfileImg"
                 alt="logo"
                 src="/images/dongmin/wecode.png"
               />
-              <div className="like-profile-text">wecode_bootcamp</div>
+              <div className="likeProfileText">wecode_bootcamp</div>
             </div>
             <div>님이 좋아합니다.</div>
           </div>
         </div>
-        <div className="name-content-cnt size-for-overflow-hidden">
+        <div className="nameContentCnt sizeForOverflowHidden">
           <span className="name">chanho_park</span>
           <span className="content">
             제가 LA에 있을때는 말이죠 정말
@@ -120,9 +120,9 @@ const Feeds = () => {
           </ul>
         </div>
         <hr />
-        <form onSubmit={onSubmit} className="input-cnt">
+        <form onSubmit={onSubmit} className="inputCnt">
           <input
-            className="input-comment"
+            className="inputComment"
             type="text"
             placeholder="댓글 달기.."
             onChange={changeInput}

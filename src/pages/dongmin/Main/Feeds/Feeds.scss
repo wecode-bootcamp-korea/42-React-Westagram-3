@@ -7,35 +7,35 @@
     background-color: white;
   }
 
-  .profile-cnt {
+  .profileCnt {
     display: flex;
     align-items: center;
     overflow: hidden;
   }
 
-  .profile-img {
+  .profileImg {
     width: 38px;
     height: 38px;
     border-radius: 50%;
     margin-right: 5px;
   }
 
-  .profile-text li:nth-child(1) {
+  .profileText li:nth-child(1) {
     font-size: 15px;
     margin: 0;
   }
 
-  .profile-text li:nth-child(2) {
+  .profileText li:nth-child(2) {
     font-size: 1px;
     margin: 0;
   }
 
-  .feeds-img-cnt {
+  .feedsImgCnt {
     width: 500px;
     height: 500px;
   }
 
-  .feeds-img {
+  .feedsImg {
     width: 100%;
   }
 
@@ -45,34 +45,34 @@
     background-color: inherit;
   }
 
-  .button-cnt {
+  .btnCnt {
     display: flex;
     justify-content: space-between;
   }
 
-  .icon-cnt {
+  .iconCnt {
     display: flex;
   }
 
-  .article-icon {
+  .articleIcon {
     width: 25px;
     height: 25px;
   }
 
-  .like-cnt {
+  .likeCnt {
     display: flex;
     align-items: center;
     font-size: 10px;
   }
 
-  .like-profile-cnt {
+  .likeProfileCnt {
     display: flex;
     align-items: center;
     height: 28px;
     overflow: hidden;
   }
 
-  .like-profile-img {
+  .likeProfileImg {
     width: 18px;
     height: 18px;
     border: 2px solid rgb(240, 240, 240);
@@ -80,21 +80,21 @@
     margin-right: 2px;
   }
 
-  .like-profile-text {
+  .likeProfileText {
     font-size: 12px;
     font-weight: 700;
     margin: 0;
   }
 
-  .like-amount-zero {
+  .likeAmountZero {
     display: none;
   }
 
-  .like-amount-not-zero {
+  .likeAmountNotZero {
     display: relative;
   }
 
-  .name-content-cnt {
+  .nameContentCnt {
     display: flex;
     width: 495px;
     height: 15px;
@@ -117,27 +117,24 @@
     opacity: 0.5;
   }
 
-  .input-cnt {
+  .inputCnt {
     display: flex;
     justify-content: space-between;
     margin: 5px auto;
-  }
-
-  .input-cnt input {
-    width: 100%;
-    margin-left: 5px;
-    border: none;
-  }
-
-  .input-cnt button {
-    width: 40px;
-    margin: 0;
-    padding: 0;
-    color: skyblue;
-    border: none;
-  }
-
-  .input-cnt button:hover {
-    color: blue;
+    input {
+      width: 100%;
+      margin-left: 5px;
+      border: none;
+    }
+    button {
+      width: 40px;
+      margin: 0;
+      padding: 0;
+      color: skyblue;
+      border: none;
+      &:hover {
+        color: blue;
+      }
+    }
   }
 }
