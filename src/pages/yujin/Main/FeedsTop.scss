@@ -1,0 +1,44 @@
+.feeds_top_container {
+  border: 1px solid rgba(128, 128, 128, 0.499);
+  width: 50%;
+  height: 70%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 60%;
+  // padding-right: 30%;
+}
+
+.feeds_profile {
+  margin-top: -5px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+
+.feeds_profile_image {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-bottom: -60px;
+  margin-right: -50px;
+}
+
+.feeds_id {
+  font-weight: bold;
+  position: relative;
+  margin-left: 47px;
+  margin-bottom: -40px;
+  margin-top: 30px;
+  // margin-bottom: 40px;
+}
+
+.feeds_more {
+  width: 30px;
+  height: 30px;
+  margin-left: 440px;
+  margin-top: 15px;
+}
+
+.main_img {
+  width: 100%;
+  height: 100%;
+}
