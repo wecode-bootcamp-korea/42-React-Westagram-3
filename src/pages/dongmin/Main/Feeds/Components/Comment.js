@@ -22,7 +22,7 @@ const Comment = props => {
         <span className="name">{name}</span>
         <span className="content">{content}</span>
       </div>
-      <div className="btn-cnt">
+      <div className="btnCnt">
         <button className="like" onClick={onBtnClickedLike}>
           <img alt="like" src="/images/dongmin/empty-heart.png" />
         </button>
