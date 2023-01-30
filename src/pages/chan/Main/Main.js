@@ -40,72 +40,108 @@ function Header() {
 
 function Feeds() {
   return (
-    <div className="feeds">
-      <article className="article">
-        <div className="feed_profile">
-          <a href="#"></a>
-          <img className="profile_image" src="images/chan/swim.jpg" />
-          <p className="profile_id">seung_chann</p>
-        </div>
+    // <article className="article">
+    <>
+      <div className="feed_profile">
+        <a href="#"></a>
+        <img className="profile_image" src="images/chan/swim.jpg" />
+        <p className="profile_id">seung_chann</p>
+      </div>
 
-        <div className="feed_photo">
-          <img src="images/chan/flower.PNG" />
-        </div>
+      <div className="feed_photo">
+        <img src="images/chan/flower.PNG" />
+      </div>
 
-        <div className="article-bottom">
-          <div className="article-links">
-            <div className="article-links-left">
-              <i className="far fa-heart"></i>
-              <i className="far fa-comment"></i>
-              <i className="fas fa-paper-plane"></i>
-            </div>
-            <div className="article-links-right">
-              <i className="far fa-bookmark"></i>
-            </div>
+      <div className="article-bottom">
+        <div className="article-links">
+          <div className="article-links-left">
+            <i className="far fa-heart"></i>
+            <i className="far fa-comment"></i>
+            <i className="fas fa-paper-plane"></i>
           </div>
-
-          <div className="article-bottom-like">
-            <div className="like-profile">
-              <a href="#"></a>
-              <img className="like_profile_image" src="images/chan/swim.jpg" />
-              <span className="article-bold">
-                wecoedworld님 외 93명이 좋아합니다.
-              </span>
-            </div>
-          </div>
-
-          <div className="article-bottom-texts">
-            <div className="comment-text">
-              <span className="article-bold">canon_mj</span>
-              <span>안녕하세요 !!</span>
-            </div>
-            <div className="comment-text">
-              <span className="article-bold">nececsoeis</span>
-              <span> 우왕 꽃이당 🌸</span>
-            </div>
-            <div className="upload-time">
-              <span>38분 전</span>
-            </div>
-          </div>
-
-          <div className="article-bottom-comments">
-            <form>
-              <div className="emotion">
-                <i className="far fa-smile"></i>
-              </div>
-              <textarea
-                id="comments-id"
-                placeholder="댓글 달기..."
-                autocomplete="off"
-                autocorrect="off"
-              ></textarea>
-              <button id="comments-submit" type="submit" disabled="true">
-                게시
-              </button>
-            </form>
+          <div className="article-links-right">
+            <i className="far fa-bookmark"></i>
           </div>
         </div>
-      </article>
+
+        <div className="article-bottom-like">
+          <div className="like-profile">
+            <a href="#"></a>
+            <img className="like_profile_image" src="images/chan/swim.jpg" />
+            <span className="article-bold">
+              wecoedworld님 외 93명이 좋아합니다.
+            </span>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function CommentList(props) {
+  return (
+    <div className="CommentList">
+      <div className="userCommentBox">
+        <div className="CommentLeft">
+          <p className="userName">{props.userName}</p>
+          <div className="userComment">{props.userComment}</div>
+        </div>
+        <div className="CommentRight">
+          <i className="far fa-heart"></i>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Comment() {
+  const [userName] = useState('JinHee');
+  const [comment, setComment] = useState('');
+  const [feedCommets, setFeedComments] = useState([]);
+  const [isValid, setIsValid] = useState(false);
+  const post = e => {
+    e.preventDefault();
+    const copyFeedComments = [...feedCommets];
+    copyFeedComments.push(comment);
+    setFeedComments(copyFeedComments);
+    setComment('');
+  };
+
+  return (
+    <div className="Comment">
+      {feedCommets.map((commentArr, i) => {
+        return (
+          <CommentList userName={userName} userComment={commentArr} Key={i} />
+        );
+      })}
+      <form onSubmit={post}>
+        <div className="emotion">
+          <i className="far fa-smile"></i>
+        </div>
+        <input
+          type="text"
+          className="inputComment"
+          id="comments-id"
+          placeholder="댓글 달기..."
+          onChange={e => {
+            setComment(e.target.value);
+          }}
+          onKeyUp={e => {
+            e.target.value.length > 0 ? setIsValid(true) : setIsValid(false);
+          }}
+          value={comment}
+        />
+        <button
+          id="comments-submit"
+          type="submit"
+          className={
+            comment.length > 0 ? 'submitCommentActive' : 'submitCommentInactive'
+          }
+          disabled={isValid ? false : true}
+        >
+          게시
+        </button>
+      </form>
     </div>
   );
 }
@@ -182,8 +218,13 @@ function Main() {
   return (
     <div className="Main">
       <Header />
-      <main className="main">
-        <Feeds />
+      <main className="Contents">
+        <div className="Left">
+          <article className="article">
+            <Feeds />
+            <Comment />
+          </article>
+        </div>
         <Aside />
       </main>
     </div>

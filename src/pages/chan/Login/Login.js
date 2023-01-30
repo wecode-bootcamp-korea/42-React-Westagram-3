@@ -10,6 +10,7 @@ function Login() {
 
   const goToMain = e => {
     // 온서브밋 이벤트 발생시 메인으로 이동!
+    e.preventDefault();
     navigate('/main-chan');
   };
 
@@ -37,7 +38,7 @@ function Login() {
   return (
     <div className="Login">
       <main>
-        <form className="login">
+        <form className="login" onSubmit={goToMain}>
           <h1 className="login-title">Westagram</h1>
           <input
             id="id"
@@ -57,7 +58,7 @@ function Login() {
             onKeyUp={handleActive}
           />
 
-          <button onClick={goToMain} className="btn" disabled={btnState}>
+          <button type="submit" className="btn" disabled={btnState}>
             로그인
           </button>
           <div className="login-signup">
