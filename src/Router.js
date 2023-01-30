@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 import LoginChan from './pages/chan/Login/Login';
 import MainChan from './pages/chan/Main/Main';
 import LoginDongmin from './pages/dongmin/Login/Login';
@@ -12,6 +13,7 @@ import MainYujin from './pages/yujin/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/login-chan" element={<LoginChan />} />
         <Route path="/main-chan" element={<MainChan />} />
