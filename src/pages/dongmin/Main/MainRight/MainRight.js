@@ -2,13 +2,6 @@ import React from 'react';
 import ProfileCard from './Components/ProfileCard';
 import './MainRight.scss';
 const MainRight = () => {
-  const setProfileCard = profile => {
-    const profileArr = [];
-    for (let i = 0; i <= 5; i++) {
-      profileArr.push(profile);
-    }
-    return profileArr;
-  };
   return (
     <div className="mainRight">
       <aside>
