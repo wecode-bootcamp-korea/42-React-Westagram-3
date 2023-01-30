@@ -151,12 +151,8 @@
       margin: 0;
       font-size: 11px;
 
-      &::after {
+      &:not(:last-child)::after {
         content: '•';
-      }
-
-      &:last-child::after {
-        content: '';
       }
     }
 

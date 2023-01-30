@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Comment.scss';
 
 const Comment = props => {
   const { index, name, content, deleteCommentFunc } = props;
 
-  const isHeartEmpty = src => (src.indexOf('empty') !== -1 ? true : false);
+  const [like, setLike] = useState('/images/dongmin/empty-heart.png');
 
-  const onBtnClickedLike = e => {
-    isHeartEmpty(e.target.src)
-      ? (e.target.src = '/images/dongmin/full-heart.png')
-      : (e.target.src = '/images/dongmin/empty-heart.png');
+  const onBtnClickedLike = () => {
+    like.includes('empty')
+      ? setLike('/images/dongmin/full-heart.png')
+      : setLike('/images/dongmin/empty-heart.png');
   };
 
   const onBtnClickedDelete = () => {
@@ -24,7 +24,7 @@ const Comment = props => {
       </div>
       <div className="btnCnt">
         <button className="like" onClick={onBtnClickedLike}>
-          <img alt="like" src="/images/dongmin/empty-heart.png" />
+          <img alt="like" src={like} />
         </button>
         <button className="delete" onClick={onBtnClickedDelete}>
           <img alt="delete" src="/images/dongmin/delete.png" />

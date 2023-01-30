@@ -3,21 +3,22 @@ import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
-  const [id, setId] = useState('');
-
-  const [pw, setPw] = useState('');
-
-  const changeId = e => {
-    setId(e.target.value);
-  };
-
-  const changePw = e => {
-    setPw(e.target.value);
-  };
-
-  const isValid = id.length >= 5 && pw.length >= 5 && pw.includes('@');
+  const [input, setInput] = useState({ id: '', pw: '' });
 
   const navigate = useNavigate();
+
+  const isValid =
+    input.id.length >= 5 && input.pw.length >= 5 && input.pw.includes('@');
+
+  const onChangeId = e => {
+    const value = e.target.value;
+    setInput({ ...input, id: value });
+  };
+
+  const onChangePw = e => {
+    const value = e.target.value;
+    setInput({ ...input, pw: value });
+  };
 
   const onClickButton = () => {
     if (!isValid) {
@@ -41,13 +42,13 @@ const Login = () => {
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             className="inputId"
-            onChange={changeId}
+            onChange={onChangeId}
           />
           <input
             type="password"
             placeholder="비밀번호"
             className="inputPw"
-            onChange={changePw}
+            onChange={onChangePw}
           />
         </div>
         <button onClick={onClickButton} disabled={!isValid}>

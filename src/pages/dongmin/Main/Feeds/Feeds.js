@@ -19,8 +19,8 @@ const Feeds = () => {
   };
 
   const onSubmit = e => {
-    const comment = { name: 'gmgmgun', content: input };
-    setCommentsList(commentsList.concat(comment));
+    const comment = { id: uuidv4(), name: 'gmgmgun', content: input };
+    setCommentsList([...commentsList, comment]);
     setInput('');
     e.preventDefault();
   };
@@ -110,7 +110,7 @@ const Feeds = () => {
           <ul>
             {commentsList.map((el, idx) => (
               <Comment
-                key={uuidv4()}
+                key={el.id}
                 index={idx}
                 name={el.name}
                 content={el.content}
