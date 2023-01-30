@@ -1,0 +1,47 @@
+.Comment {
+  width: 540px;
+  padding: 0px 10px 10px 10px;
+  // border: 2px solid #dbdbdb;
+  margin: auto;
+}
+
+.Comment form {
+  display: flex;
+  align-items: center;
+}
+
+.Comment form .emotion {
+  width: 5%;
+  height: 20px;
+}
+
+.Comment form .emotion i {
+  font-size: 20px;
+}
+
+.Comment form input {
+  width: 85%;
+  height: 30px;
+  outline: none;
+  border: none;
+  resize: none;
+  line-height: 25px;
+  text-indent: 5px;
+}
+
+.Comment form button {
+  width: 10%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #0095f6;
+}
+
+.Comment form [type='submit']:disabled {
+  background-color: #cbddf7;
+}
+
+.CommentList .article-bold {
+  font-weight: bold;
+  margin-right: 10px;
+}

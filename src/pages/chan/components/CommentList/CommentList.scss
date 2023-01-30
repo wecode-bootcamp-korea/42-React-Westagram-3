@@ -1,0 +1,19 @@
+.CommentList {
+  padding: 5px;
+  width: 100%;
+}
+
+.userCommentBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.CommentLeft {
+  display: flex;
+}
+
+.userName {
+  font-weight: bold;
+  margin-right: 10px;
+}

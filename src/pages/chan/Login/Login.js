@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import './Login.scss';
 import { useState } from 'react';
+import './Login.scss';
 
 function Login() {
   const navigate = useNavigate();
@@ -32,8 +32,8 @@ function Login() {
       : setBtnState(true);
   };
 
-  console.table({ inputId });
-  console.table({ inputPw });
+  console.table(inputId);
+  console.table(inputPw);
 
   return (
     <div className="Login">
