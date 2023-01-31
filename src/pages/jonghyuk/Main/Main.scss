@@ -608,6 +608,11 @@
         color: gray;
         margin-top: 15px;
         display: inline;
+        .links{
+        span:after{
+          content: "·"
+        }
+        }
         .watermark {
           margin-top: 15px;
         }

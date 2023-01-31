@@ -5,15 +5,11 @@ import Newcomment from './Newcomment';
 const Comment = () => {
   const [comment, setComment] = useState('');
   const hendleComment = event => {
-    //const { value } = event.target;
-    //setComment(value);
     setComment(event.target.value);
   };
   const [commentArray, setCommentArray] = useState([]);
   const eventComment = () => {
-    const result = [...commentArray];
-    result.push(comment);
-    //setComment(...commentArray);
+    const result = [...commentArray, comment];
     setCommentArray(result);
     setComment('');
   };
