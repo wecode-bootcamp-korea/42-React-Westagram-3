@@ -1,42 +1,54 @@
 .feeds {
   padding-bottom: 20px;
 
+  button {
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   article {
     border: 2px solid rgb(245, 245, 245);
-    padding-top: 5px;
     background-color: white;
-  }
 
-  .profile-cnt {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
+    .profileCnt {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      height: 50px;
+      padding-left: 3px;
+      .profileImg {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
 
-  .profile-img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
+      .profileText {
+        li {
+          &:nth-child(1) {
+            font-size: 15px;
+            font-weight: 600;
+          }
 
-  .profile-text li:nth-child(1) {
-    font-size: 15px;
-    margin: 0;
-  }
+          &:nth-child(2) {
+            font-size: 11px;
+          }
+        }
+      }
+    }
 
-  .profile-text li:nth-child(2) {
-    font-size: 1px;
-    margin: 0;
-  }
-
-  .feeds-img-cnt {
-    width: 500px;
-    height: 500px;
-  }
-
-  .feeds-img {
-    width: 100%;
+    .feedsImgCnt {
+      width: 500px;
+      height: 500px;
+      .feedsImg {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   button {
@@ -45,65 +57,68 @@
     background-color: inherit;
   }
 
-  .button-cnt {
+  .btnCnt {
     display: flex;
     justify-content: space-between;
+
+    .iconCnt {
+      display: flex;
+    }
+
+    .articleIcon {
+      width: 25px;
+      height: 25px;
+    }
   }
 
-  .icon-cnt {
-    display: flex;
-  }
-
-  .article-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .like-cnt {
+  .likeCnt {
     display: flex;
     align-items: center;
     font-size: 10px;
   }
 
-  .like-profile-cnt {
+  .likeProfileCnt {
     display: flex;
     align-items: center;
     height: 28px;
     overflow: hidden;
+
+    .likeProfileImg {
+      width: 22px;
+      height: 22px;
+      margin-left: 2px;
+      border: 1px solid rgb(240, 240, 240);
+      border-radius: 50%;
+      margin-right: 2px;
+    }
+
+    .likeProfileText {
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .likeAmountZero {
+      display: none;
+    }
+
+    .likeAmountNotZero {
+      display: relative;
+    }
   }
 
-  .like-profile-img {
-    width: 18px;
-    height: 18px;
-    border: 2px solid rgb(240, 240, 240);
-    border-radius: 50%;
-    margin-right: 2px;
-  }
-
-  .like-profile-text {
-    font-size: 12px;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  .like-amount-zero {
-    display: none;
-  }
-
-  .like-amount-not-zero {
-    display: relative;
-  }
-
-  .name-content-cnt {
+  .nameContentCnt {
     display: flex;
     width: 495px;
     height: 15px;
     margin-left: 5px;
+
     .name {
       font-size: 13px;
       font-weight: 700;
       margin-right: 5px;
     }
+
     .content {
       font-size: 13px;
       overflow: hidden;
@@ -117,27 +132,24 @@
     opacity: 0.5;
   }
 
-  .input-cnt {
+  .inputCnt {
     display: flex;
     justify-content: space-between;
     margin: 5px auto;
-  }
-
-  .input-cnt input {
-    width: 100%;
-    margin-left: 5px;
-    border: none;
-  }
-
-  .input-cnt button {
-    width: 40px;
-    margin: 0;
-    padding: 0;
-    color: skyblue;
-    border: none;
-  }
-
-  .input-cnt button:hover {
-    color: blue;
+    input {
+      width: 100%;
+      margin-left: 5px;
+      border: none;
+    }
+    button {
+      width: 40px;
+      margin: 0;
+      padding: 0;
+      color: skyblue;
+      border: none;
+      &:hover {
+        color: blue;
+      }
+    }
   }
 }

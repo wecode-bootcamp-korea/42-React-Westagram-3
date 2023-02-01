@@ -1,26 +1,51 @@
 import React, { useState } from 'react';
 import './Feeds.scss';
-import Comment from './Comment/Comment';
-import { v4 as uuidv4 } from 'uuid';
+import Comment from './Components/Comment';
 
-const Feeds = () => {
+const Feeds = ({ feed }) => {
   const [input, setInput] = useState('');
+
   const [commentsList, setCommentsList] = useState([]);
+
+  const {
+    profileImg,
+    profileText,
+    feedImg,
+    nickname,
+    content,
+    likeProfileImg,
+    likeProfileText,
+  } = feed;
+
   const changeInput = e => {
     setInput(e.target.value);
   };
 
+  const changeLiked = idxOfChangingLiked => {
+    setCommentsList(
+      commentsList.map((comment, idx) => {
+        if (idx === idxOfChangingLiked) comment.isLiked = !comment.isLiked;
+        return comment;
+      })
+    );
+  };
+
   const deleteComment = idxOfBeingDeleted => {
     setCommentsList(
-      commentsList.filter((el, idx) => {
+      commentsList.filter((comment, idx) => {
         return idx !== idxOfBeingDeleted;
       })
     );
   };
 
   const onSubmit = e => {
-    const comment = { name: 'gmgmgun', content: input };
-    setCommentsList(commentsList.concat(comment));
+    const comment = {
+      id: commentsList.length + 1,
+      name: 'gmgmgun',
+      content: input,
+      isLiked: false,
+    };
+    setCommentsList([...commentsList, comment]);
     setInput('');
     e.preventDefault();
   };
@@ -28,39 +53,31 @@ const Feeds = () => {
   return (
     <div className="feeds">
       <article>
-        <div className="profile-cnt">
-          <img
-            className="profile-img"
-            alt="logo"
-            src="/images/dongmin/wecode.png"
-          />
-          <ul className="profile-text">
-            <li>wecode_bootcamp</li>
-            <li>WeCode - 위코드</li>
+        <div className="profileCnt">
+          <img className="profileImg" alt="logo" src={profileImg} />
+          <ul className="profileText">
+            <li>{profileText[0]}</li>
+            <li>{profileText[1]}</li>
           </ul>
         </div>
-        <div className="feeds-img-cnt">
-          <img
-            className="feeds-img"
-            alt="focus"
-            src="/images/dongmin/feed.jpg"
-          />
+        <div className="feedsImgCnt">
+          <img className="feedsImg" alt="focus" src={feedImg} />
         </div>
-        <div className="button-cnt">
-          <ul className="icon-cnt">
+        <div className="btnCnt">
+          <ul className="iconCnt">
             <li>
-              <button className="heart-button">
+              <button className="heartButton">
                 <img
-                  className="article-icon"
+                  className="articleIcon"
                   alt="logo"
-                  src="/images/dongmin/empty-heart.png"
+                  src="/images/dongmin/full-heart.png"
                 />
               </button>
             </li>
             <li>
               <button>
                 <img
-                  className="article-icon"
+                  className="articleIcon"
                   alt="logo"
                   src="/images/dongmin/chat.png"
                 />
@@ -69,60 +86,59 @@ const Feeds = () => {
             <li>
               <button>
                 <img
-                  className="article-icon"
+                  className="articleIcon"
                   alt="logo"
                   src="/images/dongmin/upload.png"
                 />
               </button>
             </li>
           </ul>
-          <div className="icon-cnt">
+          <div className="iconCnt">
             <button>
               <img
-                className="article-icon"
+                className="articleIcon"
                 alt="logo"
                 src="/images/dongmin/bookmark.png"
               />
             </button>
           </div>
         </div>
-        <div id="like-amount" className="like-amount-not-zero">
-          <div className="like-cnt">
-            <div className="like-profile-cnt">
-              <img
-                className="like-profile-img"
-                alt="logo"
-                src="/images/dongmin/wecode.png"
-              />
-              <div className="like-profile-text">wecode_bootcamp</div>
+        <div id="likeAmount" className="likeAmountNotZero">
+          <div className="likeCnt">
+            <div className="likeProfileCnt">
+              <img className="likeProfileImg" alt="logo" src={likeProfileImg} />
+              <div className="likeProfileText">{likeProfileText}</div>
             </div>
             <div>님이 좋아합니다.</div>
           </div>
         </div>
-        <div className="name-content-cnt size-for-overflow-hidden">
-          <span className="name">chanho_park</span>
+        <div className="nameContentCnt sizeForOverflowHidden">
+          <span className="name">{nickname}</span>
           <span className="content">
-            제가 LA에 있을때는 말이죠 정말
-            제가나다라마바사아자카타파하가나다라마바사아자차카타파하
+            {/* "제가 LA에 있을때는 말이죠 정말
+            제가나다라마바사아자카타파하가나다라마바사아자차카타파하" */}
+            {content}
           </span>
         </div>
         <div>
           <ul>
-            {commentsList.map((el, idx) => (
+            {commentsList.map((comment, idx) => (
               <Comment
-                key={uuidv4()}
+                key={comment.id}
                 index={idx}
-                name={el.name}
-                content={el.content}
-                deleteCommentFunc={deleteComment}
+                name={comment.name}
+                content={comment.content}
+                isLiked={comment.isLiked}
+                deleteComment={deleteComment}
+                changeLiked={changeLiked}
               />
             ))}
           </ul>
         </div>
         <hr />
-        <form onSubmit={onSubmit} className="input-cnt">
+        <form onSubmit={onSubmit} className="inputCnt">
           <input
-            className="input-comment"
+            className="inputComment"
             type="text"
             placeholder="댓글 달기.."
             onChange={changeInput}
