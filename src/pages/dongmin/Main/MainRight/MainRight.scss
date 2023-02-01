@@ -6,8 +6,23 @@
 
   .sticky {
     position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15px;
     top: 0;
-    z-index: 100;
+    span {
+      &:nth-child(1) {
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+    }
+  }
+
+  .showAll {
+    font-size: 10px;
+    font-weight: 700;
   }
 
   .profileCnt {
@@ -34,20 +49,12 @@
   .storyWrap {
     position: relative;
     border: 2px solid rgb(245, 245, 245);
-    height: 200px;
-    padding: 8px;
+    padding: 8px 8px 0px 8px;
     background-color: white;
     font-size: 10px;
 
-    .showAll {
-      top: 5px;
-      right: 5px;
-      position: absolute;
-      font-size: 10px;
-      font-weight: 700;
-    }
     .storyLi {
-      height: 100%;
+      height: 210px;
       overflow: scroll;
       &::-webkit-scrollbar {
         display: none;
@@ -91,25 +98,16 @@
   .recommendWrap {
     position: relative;
     border: 2px solid rgb(245, 245, 245);
-    height: 200px;
-    padding: 8px;
+    padding: 8px 8px 0px 8px;
     background-color: white;
     font-size: 10px;
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    .showAll {
-      top: 5px;
-      right: 5px;
-      position: absolute;
-      font-size: 10px;
-      font-weight: 700;
-    }
 
     .storyLi {
+      height: 210px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .sideProfileCnt {
         display: flex;
         align-items: center;

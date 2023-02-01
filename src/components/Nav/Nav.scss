@@ -4,6 +4,7 @@ nav {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
+
   .navCnt {
     display: flex;
     justify-content: space-around;
@@ -63,5 +64,11 @@ nav {
       font-family: ‘Lobster’, cursive;
       font-size: 13px;
     }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .navLeft {
+    visibility: hidden;
   }
 }

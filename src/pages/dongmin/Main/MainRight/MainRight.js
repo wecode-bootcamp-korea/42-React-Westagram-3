@@ -33,8 +33,10 @@ const MainRight = () => {
           </ul>
         </div>
         <div className="recommendWrap">
-          회원님을 위한 추천
-          <span className="showAll">모두 보기</span>
+          <div className="sticky">
+            <span>회원님을 위한 추천</span>
+            <span className="showAll">모두 보기</span>
+          </div>
           <ul className="storyLi">
             {PROFILE_INFO_LIST[1].map(info => (
               <ProfileCard
@@ -78,6 +80,10 @@ const PROFILE_INFO_LIST = [
     { id: 5, name: 'junhyun', nickname: 'junwise.park', time: '43분 전' },
     { id: 6, name: 'junhyun', nickname: 'junwise.park', time: '44분 전' },
     { id: 7, name: 'junhyun', nickname: 'junwise.park', time: '45분 전' },
+    { id: 8, name: 'junhyun', nickname: 'junwise.park', time: '45분 전' },
+    { id: 9, name: 'junhyun', nickname: 'junwise.park', time: '46분 전' },
+    { id: 10, name: 'junhyun', nickname: 'junwise.park', time: '47분 전' },
+    { id: 11, name: 'junhyun', nickname: 'junwise.park', time: '48분 전' },
   ],
   [
     { id: 1, name: 'soohyun', nickname: 'watervillage.kim', time: '24초 전' },
@@ -87,5 +93,9 @@ const PROFILE_INFO_LIST = [
     { id: 5, name: 'soohyun', nickname: 'watervillage.kim', time: '43분 전' },
     { id: 6, name: 'soohyun', nickname: 'watervillage.kim', time: '44분 전' },
     { id: 7, name: 'soohyun', nickname: 'watervillage.kim', time: '45분 전' },
+    { id: 8, name: 'soohyun', nickname: 'watervillage.kim', time: '45분 전' },
+    { id: 9, name: 'soohyun', nickname: 'watervillage.kim', time: '46분 전' },
+    { id: 10, name: 'soohyun', nickname: 'watervillage.kim', time: '47분 전' },
+    { id: 11, name: 'soohyun', nickname: 'watervillage.kim', time: '48분 전' },
   ],
 ];

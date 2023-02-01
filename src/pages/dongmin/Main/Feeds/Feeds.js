@@ -112,13 +112,11 @@ const Feeds = ({ feed }) => {
             <div>님이 좋아합니다.</div>
           </div>
         </div>
-        <div className="nameContentCnt sizeForOverflowHidden">
-          <span className="name">{nickname}</span>
-          <span className="content">
-            {/* "제가 LA에 있을때는 말이죠 정말
-            제가나다라마바사아자카타파하가나다라마바사아자차카타파하" */}
-            {content}
-          </span>
+        <div className="mainText">
+          <div className="nameContentCnt sizeForOverflowHidden">
+            <span className="name">{nickname}</span>
+            <span className="content">{content}</span>
+          </div>
         </div>
         <div>
           <ul>
