@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "profileImg": "/images/dongmin/wecode.png",
+    "profileText": ["wecode_bootcamp", "WeCode - 위코드"],
+    "feedImg": "/images/dongmin/feed.jpg",
+    "nickname": "chanho.park",
+    "content": "제가 LA에 있을때는 말이죠 정말 제가나다라마바사아자카타파하가나다라마바사아자차카타파하",
+    "likeProfileImg": "/images/dongmin/wecode.png",
+    "likeProfileText": "wecode_bootcamp"
+  },
+  {
+    "id": 2,
+    "profileImg": "/images/dongmin/ming9profile.jpg",
+    "profileText": ["ming.nine", "해인의 주인님"],
+    "feedImg": "/images/dongmin/ming9feed.jpg",
+    "nickname": "ming.nine",
+    "content": "나도 보라카이 데려가라옹",
+    "likeProfileImg": "https://ca.slack-edge.com/TH0U6FBTN-U049RHM2B7D-41b7a79eedff-512",
+    "likeProfileText": "sunin.lee"
+  },
+  {
+    "id": 3,
+    "profileImg": "/images/dongmin/ondalprofile.jpg",
+    "profileText": ["on.moon", "준현의 왕자님"],
+    "feedImg": "/images/dongmin/ondalfeed.jpg",
+    "nickname": "on.moon",
+    "content": "ㄴr도 ㄱr끔 눈물을 흘린ㄷr.. ",
+    "likeProfileImg": "/images/dongmin/junhyun.png",
+    "likeProfileText": "junwise.park"
+  }
+]

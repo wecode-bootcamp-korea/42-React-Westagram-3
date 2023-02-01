@@ -1,25 +1,50 @@
 import React, { useState } from 'react';
 import './Feeds.scss';
 import Comment from './Components/Comment';
-import { v4 as uuidv4 } from 'uuid';
 
-const Feeds = () => {
+const Feeds = ({ feed }) => {
   const [input, setInput] = useState('');
+
   const [commentsList, setCommentsList] = useState([]);
+
+  const {
+    profileImg,
+    profileText,
+    feedImg,
+    nickname,
+    content,
+    likeProfileImg,
+    likeProfileText,
+  } = feed;
+
   const changeInput = e => {
     setInput(e.target.value);
   };
 
+  const changeLiked = idxOfChangingLiked => {
+    setCommentsList(
+      commentsList.map((comment, idx) => {
+        if (idx === idxOfChangingLiked) comment.isLiked = !comment.isLiked;
+        return comment;
+      })
+    );
+  };
+
   const deleteComment = idxOfBeingDeleted => {
     setCommentsList(
-      commentsList.filter((el, idx) => {
+      commentsList.filter((comment, idx) => {
         return idx !== idxOfBeingDeleted;
       })
     );
   };
 
   const onSubmit = e => {
-    const comment = { id: uuidv4(), name: 'gmgmgun', content: input };
+    const comment = {
+      id: commentsList.length + 1,
+      name: 'gmgmgun',
+      content: input,
+      isLiked: false,
+    };
     setCommentsList([...commentsList, comment]);
     setInput('');
     e.preventDefault();
@@ -29,22 +54,14 @@ const Feeds = () => {
     <div className="feeds">
       <article>
         <div className="profileCnt">
-          <img
-            className="profileImg"
-            alt="logo"
-            src="/images/dongmin/wecode.png"
-          />
+          <img className="profileImg" alt="logo" src={profileImg} />
           <ul className="profileText">
-            <li>wecode_bootcamp</li>
-            <li>WeCode - 위코드</li>
+            <li>{profileText[0]}</li>
+            <li>{profileText[1]}</li>
           </ul>
         </div>
         <div className="feedsImgCnt">
-          <img
-            className="feedsImg"
-            alt="focus"
-            src="/images/dongmin/feed.jpg"
-          />
+          <img className="feedsImg" alt="focus" src={feedImg} />
         </div>
         <div className="btnCnt">
           <ul className="iconCnt">
@@ -53,7 +70,7 @@ const Feeds = () => {
                 <img
                   className="articleIcon"
                   alt="logo"
-                  src="/images/dongmin/empty-heart.png"
+                  src="/images/dongmin/full-heart.png"
                 />
               </button>
             </li>
@@ -89,32 +106,31 @@ const Feeds = () => {
         <div id="likeAmount" className="likeAmountNotZero">
           <div className="likeCnt">
             <div className="likeProfileCnt">
-              <img
-                className="likeProfileImg"
-                alt="logo"
-                src="/images/dongmin/wecode.png"
-              />
-              <div className="likeProfileText">wecode_bootcamp</div>
+              <img className="likeProfileImg" alt="logo" src={likeProfileImg} />
+              <div className="likeProfileText">{likeProfileText}</div>
             </div>
             <div>님이 좋아합니다.</div>
           </div>
         </div>
         <div className="nameContentCnt sizeForOverflowHidden">
-          <span className="name">chanho_park</span>
+          <span className="name">{nickname}</span>
           <span className="content">
-            제가 LA에 있을때는 말이죠 정말
-            제가나다라마바사아자카타파하가나다라마바사아자차카타파하
+            {/* "제가 LA에 있을때는 말이죠 정말
+            제가나다라마바사아자카타파하가나다라마바사아자차카타파하" */}
+            {content}
           </span>
         </div>
         <div>
           <ul>
-            {commentsList.map((el, idx) => (
+            {commentsList.map((comment, idx) => (
               <Comment
-                key={el.id}
+                key={comment.id}
                 index={idx}
-                name={el.name}
-                content={el.content}
-                deleteCommentFunc={deleteComment}
+                name={comment.name}
+                content={comment.content}
+                isLiked={comment.isLiked}
+                deleteComment={deleteComment}
+                changeLiked={changeLiked}
               />
             ))}
           </ul>

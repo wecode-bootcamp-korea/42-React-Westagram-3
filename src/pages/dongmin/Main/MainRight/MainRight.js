@@ -17,8 +17,10 @@ const MainRight = () => {
           </ul>
         </div>
         <div className="storyWrap">
-          스토리
-          <span className="showAll">모두 보기</span>
+          <div className="sticky">
+            <span>스토리</span>
+            <span className="showAll">모두 보기</span>
+          </div>
           <ul className="storyLi">
             {PROFILE_INFO_LIST[0].map(info => (
               <ProfileCard

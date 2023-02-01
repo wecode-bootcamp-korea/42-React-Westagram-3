@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Comment.scss';
 
 const Comment = props => {
-  const { index, name, content, deleteCommentFunc } = props;
-
-  const [like, setLike] = useState('/images/dongmin/empty-heart.png');
-
+  const { index, name, content, isLiked, deleteComment, changeLiked } = props;
   const onBtnClickedLike = () => {
-    like.includes('empty')
-      ? setLike('/images/dongmin/full-heart.png')
-      : setLike('/images/dongmin/empty-heart.png');
+    changeLiked(index);
   };
 
   const onBtnClickedDelete = () => {
-    deleteCommentFunc(index);
+    deleteComment(index);
   };
 
   return (
@@ -24,7 +19,14 @@ const Comment = props => {
       </div>
       <div className="btnCnt">
         <button className="like" onClick={onBtnClickedLike}>
-          <img alt="like" src={like} />
+          <img
+            alt="like"
+            src={
+              isLiked
+                ? '/images/dongmin/full-heart.png'
+                : '/images/dongmin/empty-heart.png'
+            }
+          />
         </button>
         <button className="delete" onClick={onBtnClickedDelete}>
           <img alt="delete" src="/images/dongmin/delete.png" />

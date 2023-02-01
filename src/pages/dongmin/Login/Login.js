@@ -10,14 +10,9 @@ const Login = () => {
   const isValid =
     input.id.length >= 5 && input.pw.length >= 5 && input.pw.includes('@');
 
-  const onChangeId = e => {
-    const value = e.target.value;
-    setInput({ ...input, id: value });
-  };
-
-  const onChangePw = e => {
-    const value = e.target.value;
-    setInput({ ...input, pw: value });
+  const onChangeInput = e => {
+    const { name, value } = e.target;
+    setInput({ ...input, [name]: value });
   };
 
   const onClickButton = () => {
@@ -39,16 +34,18 @@ const Login = () => {
         <h1>westagram</h1>
         <div className="inputCnt">
           <input
+            name="id"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             className="inputId"
-            onChange={onChangeId}
+            onChange={onChangeInput}
           />
           <input
+            name="pw"
             type="password"
             placeholder="비밀번호"
             className="inputPw"
-            onChange={onChangePw}
+            onChange={onChangeInput}
           />
         </div>
         <button onClick={onClickButton} disabled={!isValid}>

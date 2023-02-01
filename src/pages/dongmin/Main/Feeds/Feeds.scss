@@ -1,16 +1,25 @@
 .feeds {
   padding-bottom: 20px;
 
+  button {
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   article {
     border: 2px solid rgb(245, 245, 245);
-    padding-top: 5px;
     background-color: white;
 
     .profileCnt {
       display: flex;
       align-items: center;
       overflow: hidden;
-
+      height: 50px;
+      padding-left: 3px;
       .profileImg {
         width: 38px;
         height: 38px;
@@ -22,12 +31,11 @@
         li {
           &:nth-child(1) {
             font-size: 15px;
-            margin: 0;
+            font-weight: 600;
           }
 
           &:nth-child(2) {
-            font-size: 12px;
-            margin: 0;
+            font-size: 11px;
           }
         }
       }
@@ -38,6 +46,7 @@
       height: 500px;
       .feedsImg {
         width: 100%;
+        height: 100%;
       }
     }
   }
@@ -75,9 +84,10 @@
     overflow: hidden;
 
     .likeProfileImg {
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgb(240, 240, 240);
+      width: 22px;
+      height: 22px;
+      margin-left: 2px;
+      border: 1px solid rgb(240, 240, 240);
       border-radius: 50%;
       margin-right: 2px;
     }
