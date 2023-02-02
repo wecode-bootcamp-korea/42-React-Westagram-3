@@ -2,10 +2,16 @@
   border: 1px solid rgba(128, 128, 128, 0.499);
   width: 50%;
   height: 70%;
-  margin-top: 10%;
+  // margin-top: -30%;
+  // margin-top: 40%;
+  margin-top: -800px;
   margin-left: 10%;
   margin-right: 60%;
+  // display: block;
   // padding-right: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .feeds_profile {
@@ -34,7 +40,7 @@
 .feeds_more {
   width: 30px;
   height: 30px;
-  margin-left: 440px;
+  margin-left: 660px;
   margin-top: 15px;
 }
 

@@ -8,6 +8,7 @@
 }
 
 .containerBox {
+  margin-top: 20px;
   margin-left: 50px;
   margin-right: 40px;
 }
@@ -53,20 +54,19 @@
   background-color: rgba(130, 161, 255, 0.909);
 }
 
-.insta_img {
-  margin-top: 30px;
-  width: 300px;
-  height: 120px;
-}
-
 .passwordForgot {
   color: rgba(16, 16, 74, 0.792);
   margin-bottom: 20px;
 }
 
-.signUp {
-  margin-top: -6px;
+.signIn {
   color: rgba(130, 161, 255, 0.909);
   background: transparent;
   border: none;
+}
+
+.signText {
+  margin-top: 70px;
+  font-size: 30px;
+  font-weight: bold;
 }

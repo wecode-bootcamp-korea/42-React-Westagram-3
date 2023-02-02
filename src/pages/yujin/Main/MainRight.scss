@@ -1,67 +1,130 @@
-// .story {
-//   position: relative;
-//   left: 650px;
-//   top: -650px;
-//   margin-left: 70%;
-//   background-color: rgb(212, 127, 127);
-//   width: 30%;
-//   height: 60%;
-// }
+.main {
+  margin-top: 60px;
+}
+
+.story_box_container {
+  margin-top: -20px;
+}
 
 .story_list {
-  width: 30%;
+  width: 24%;
   height: 100%;
-  margin-top: 10%;
+  margin-top: 2.5%;
+  // margin-top: -300px;
   margin-bottom: 5%;
-  margin-left: 60%;
+  margin-left: 63%;
   margin-right: 10%;
-  background-color: pink;
+  // background-color: pink;
   list-style: none;
+  border: 1px solid rgba(128, 128, 128, 0.281);
+  overflow: auto;
+  border-radius: 1%;
 }
 
 .story_box {
   width: 100%;
   height: 100%;
-  background-color: lightblue;
+}
+
+.top_profile_image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 63%;
+  // margin-top: -1300px;
+  display: block;
 }
 
 .profile_image {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
   margin-left: 5%;
-  margin-top: 3%;
-  margin-bottom: 10%;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-right: 5%;
+}
+
+.top_user_id {
+  margin-left: 69%;
+  margin-top: -55px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.top_user_name {
+  margin-left: 69%;
 }
 
 .user_id {
-  margin-top: -7%;
-  margin-left: 20%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: space-between;
+  display: block;
+  margin-bottom: -10px;
+  margin-top: -75px;
+  margin-left: 23%;
+  font-weight: bold;
 }
 
 .story_time {
-  margin-top: -7%;
-  margin-left: 60%;
+  margin-top: 15px;
+  display: block;
+  padding-top: -50px;
+  margin-left: 23%;
+  color: rgba(128, 128, 128, 0.987);
 }
 
 .story_text {
   color: gray;
   margin-left: 5%;
   padding-top: 5%;
+  margin-bottom: 10px;
 }
 
 .view_all_story {
-  margin-top: -3%;
-  margin-left: 80%;
+  margin-top: -23px;
+  margin-left: 73%;
+  font-weight: bold;
 }
 
 .suggest {
-  width: 30%;
+  width: 24%;
   height: 40%;
-  margin-left: 60%;
-  background-color: blanchedalmond;
+  margin-left: 63%;
+  // background-color: blanchedalmond;
   list-style: none;
+  border: 1px solid rgba(128, 128, 128, 0.281);
+  overflow: auto;
+  margin-top: -40px;
+  border-radius: 1%;
+}
+
+.recomment_text {
+  color: gray;
+  margin-left: 5%;
+  padding-top: 5%;
+}
+
+.view_all_suggestion {
+  margin-top: -3%;
+  margin-left: 73%;
+  font-weight: bold;
+}
+
+.follow {
+  margin-left: 80%;
+  margin-top: -30px;
+  color: rgb(131, 131, 247);
+}
+
+.data {
+  color: rgba(128, 128, 128, 0.638);
+  margin-left: 64%;
+  margin-top: 40px;
+  width: 300px;
+  height: 100px;
 }

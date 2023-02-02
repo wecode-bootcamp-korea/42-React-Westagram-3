@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "feedsId": "sky_lover",
+    "mainImage": "images/yujin/IMG_0883.JPG",
+    "authorFeedContent": "longbeach california",
+    "profileImage": "/images/yujin/IMG_0883.JPG",
+    "commentAuthor": "pink_sky",
+    "firstComment": "how beautiful🫧",
+    "userName": "chochgogi",
+    "likeCount": "10,379",
+    "comments": [
+      {
+        "id": 1,
+        "userName": "icecream",
+        "content": "nice"
+      },
+      {
+        "id": 2,
+        "userName": "chocochoco",
+        "content": "comment test"
+      },
+      {
+        "id": 3,
+        "userName": "apple",
+        "content": "test"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "feedsId": "yellow",
+    "mainImage": "images/yujin/longlong.png",
+    "authorFeedContent": "joshua tree",
+    "profileImage": "images/yujin/longlong.png",
+    "commentAuthor": "hollister",
+    "firstComment": "nice weather",
+    "userName": "sunrise",
+    "likeCount": "37,213",
+    "comments": [
+      {
+        "id": 1,
+        "userName": "tree",
+        "content": "very nice"
+      },
+      {
+        "id": 2,
+        "userName": "calicali",
+        "content": "fornia"
+      },
+      {
+        "id": 3,
+        "userName": "los_angeles",
+        "content": "january"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "feedsId": "gogogog",
+    "mainImage": "images/yujin/dis.JPG",
+    "authorFeedContent": "how cute",
+    "profileImage": "images/yujin/dis.JPG",
+    "commentAuthor": "abercrombie",
+    "firstComment": "micky",
+    "userName": "sunset",
+    "likeCount": "17,210",
+    "comments": [
+      {
+        "id": 1,
+        "userName": "jellyjelly",
+        "content": "Hey"
+      },
+      {
+        "id": 2,
+        "userName": "disney_lover",
+        "content": "micky"
+      },
+      {
+        "id": 3,
+        "userName": "pinknip",
+        "content": "minnie"
+      }
+    ]
+  }
+]

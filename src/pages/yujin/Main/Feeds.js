@@ -2,18 +2,20 @@ import React from 'react';
 import FeedsBottom from './FeedsBottom';
 import FeedsTop from './FeedsTop';
 
-function Feeds() {
-  const profileImage = '/images/yujin/IMG_0153.jpg';
-  const feedsImage = 'https://cdn-icons-png.flaticon.com/128/2354/2354557.png';
-  const mainImage = '/images/yujin/IMG_0883.JPG';
-  const feedsId = 'califivepm';
+function Feeds(props) {
+  const {
+    mainImage,
+    feedsId,
+    authorFeedContent,
+    profileImage,
+    commentAuthor,
+    firstComment,
+    userName,
+    likeCount,
+  } = props;
 
-  const userName = 'westagram';
-  const likeCount = '10,379';
-  const authorName = 'skylover';
-  const authorFeedContent = 'Pink Sky ☁️💗';
-  const commentAuthor = 'coding_yumyum';
-  const firstComment = 'how beautiful🫧';
+  const feedsImage = 'https://cdn-icons-png.flaticon.com/128/2354/2354557.png';
+
   const uploadTime = '30초';
 
   return (
@@ -23,11 +25,12 @@ function Feeds() {
         feedsImage={feedsImage}
         mainImage={mainImage}
         feedsId={feedsId}
+        // topMainImg={topMainImg}
       />
       <FeedsBottom
         userName={userName}
         likeCount={likeCount}
-        authorName={authorName}
+        authorName={feedsId}
         authorFeedContent={authorFeedContent}
         commentAuthor={commentAuthor}
         firstComment={firstComment}
