@@ -1,0 +1,63 @@
+{
+  "feedData": [
+    {
+      "feedId": 1,
+      "username": "yuri_leejh",
+      "otherUserName": "canon_mj",
+      "userImg" : "images/jonghyuk/mainimg.jpg",
+      "feedImages": [
+        {
+          "imgId": 101,
+          "imgUrl": "images/jonghyuk/feedimg.jpg"
+        }
+      ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
+      "content": "역시 겨울에는 동남아 휴양지...",
+      "comment": "거봐 좋았잖아~~~~"
+    },
+    {
+      "feedId": 2,
+      "username": "react",
+      "userImg" : "images/jonghyuk/newuserimg1.jpg",
+      "feedImages": [
+        {
+          "imgId": 101,
+          "imgUrl": "images/jonghyuk/feedimg1.jpg"
+        }
+      ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
+      "content": "향수"
+    },
+    {
+      "feedId": 3,
+      "username": "java",
+      "userImg" : "images/jonghyuk/newuserimg2.jpg",
+      "feedImages": [
+        {
+          "imgId": 102,
+          "imgUrl": "images/jonghyuk/feedimg2.jpg"
+        }
+      ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
+      "content": "기도",
+      "comment": "god bless you"
+    },
+    {
+      "feedId": 4,
+      "username": "javascript",
+      "userImg" : "images/jonghyuk/newuserimg3.jpg",
+      "feedImages": [
+        {
+          "imgId": 103,
+          "imgUrl": "images/jonghyuk/feedimg3.jpg"
+        }
+      ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
+      "content": "신발"
+    }
+  ]
+}

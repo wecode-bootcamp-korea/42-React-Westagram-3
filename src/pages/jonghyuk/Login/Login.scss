@@ -1,0 +1,58 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .backGround {
+    width: 400px;
+    height: 500px;
+    border: 10px solid #fafafa;
+
+    .logo {
+      margin-top: 25px;
+      margin-bottom: 100px;
+      font-family: 'Lobster', cursive;
+      font-size: 70px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .login {
+        background-color: #fafafa;
+        width: 300px;
+        height: 40px;
+        margin-bottom: 15px;
+        padding: 3px;
+        border: 1px solid #dcd4d4;
+        border-radius: 2px;
+      }
+      #loginBtn {
+        width: 309px;
+        background-color: skyblue;
+        border-color: skyblue;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+
+      #loginDisabled {
+        width: 309px;
+        background-color: #c4e1fb;
+        border-color: #c4e1fb;
+        border-radius: 5px;
+        color: white;
+        cursor: not-allowed;
+      }
+    }
+    .forgotPw {
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+      text-decoration-line: none;
+    }
+  }
+}
