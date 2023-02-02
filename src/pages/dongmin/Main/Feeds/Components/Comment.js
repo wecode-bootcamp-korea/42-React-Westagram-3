@@ -1,8 +1,9 @@
 import React from 'react';
 import './Comment.scss';
 
-const Comment = props => {
-  const { index, name, content, isLiked, deleteComment, changeLiked } = props;
+const Comment = comment => {
+  const { index, name, content, isLiked, deleteComment, changeLiked } = comment;
+
   const onBtnClickedLike = () => {
     changeLiked(index);
   };

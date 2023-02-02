@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ProfileCard = props => {
-  const { name, nickname, time } = props;
+const ProfileCard = profile => {
+  const { name, nickname, time } = profile;
   return (
     <li>
       <div className="sideProfileCnt">

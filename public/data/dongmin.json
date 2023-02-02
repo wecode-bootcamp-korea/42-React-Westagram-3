@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "profileImg": "/images/dongmin/wecode.png",
-    "profileText": ["wecode_bootcamp", "WeCode - 위코드"],
-    "feedImg": "/images/dongmin/feed.jpg",
-    "nickname": "chanho.park",
-    "content": "제가 LA에 있을때는 말이죠 정말 제가나다라마바사아자카타파하가나다라마바사아자차카타파하",
+    "profileImg": "/images/dongmin/soundprofile.jpeg",
+    "profileText": ["sound.yellow", "Backend Developer"],
+    "feedImg": "/images/dongmin/soundfeed.jpeg",
+    "nickname": "sound.yellow",
+    "content": "자는 모습 찍혀버렸다냥",
     "likeProfileImg": "/images/dongmin/wecode.png",
     "likeProfileText": "wecode_bootcamp"
   },
@@ -16,7 +16,7 @@
     "feedImg": "/images/dongmin/ming9feed.jpg",
     "nickname": "ming.nine",
     "content": "나도 보라카이 데려가라옹",
-    "likeProfileImg": "https://ca.slack-edge.com/TH0U6FBTN-U049RHM2B7D-41b7a79eedff-512",
+    "likeProfileImg": "/images/dongmin/haein.jpg",
     "likeProfileText": "sunin.lee"
   },
   {

@@ -5,24 +5,65 @@ import './Login.scss';
 const Login = () => {
   const [input, setInput] = useState({ id: '', pw: '' });
 
+  const { id, pw } = input;
+
+  const loginUrl = 'http://10.58.52.229:3000/user/signin';
+  const signupUrl = 'http://10.58.52.229:3000/user/signup';
+
   const navigate = useNavigate();
 
-  const isValid =
-    input.id.length >= 5 && input.pw.length >= 5 && input.pw.includes('@');
+  const isValid = id.length >= 5 && pw.length >= 5 && pw.includes('@');
 
   const onChangeInput = e => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
   };
 
-  const onClickButton = () => {
-    if (!isValid) {
-      return;
-    }
-    return navigate('/main-dongmin');
+  const onClickBtnSignup = () => {
+    fetch(signupUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+        name: 'user135',
+        phoneNumber: '010-2333-3333',
+        profileImage: '',
+      }),
+    })
+      .then(response => response.json())
+      .then(
+        (
+          data // eslint-disable-next-line no-console
+        ) => console.log(data)
+      );
   };
 
-  const onClickFacebookBtn = () => {
+  const onClickBtnLogin = () => {
+    fetch(loginUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        localStorage.setItem('token', result.accessToken);
+        if (localStorage.getItem('token') !== 'undefined') {
+          return navigate('/main-dongmin');
+        } else {
+          alert('입력이 틀렸습니다');
+        }
+      });
+  };
+
+  const onClickBtnFacebook = () => {
     window.open(
       'https://www.facebook.com/dialog/oauth?client_id=124024574287414&redirect_uri=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F&state=%7B%22fbLoginKey%22%3A%221jpksqp1veyryd11yb2tw144wms313dh8i3wmio351omwr9112gyt3t%22%2C%22fbLoginReturnURL%22%3A%22%2Ffxcal%2Fdisclosure%2F%3Fnext%3D%252F%22%7D&scope=email&response_type=code%2Cgranted_scopes&locale=ko_KR'
     );
@@ -48,14 +89,14 @@ const Login = () => {
             onChange={onChangeInput}
           />
         </div>
-        <button onClick={onClickButton} disabled={!isValid}>
+        <button onClick={onClickBtnLogin} disabled={!isValid}>
           로그인
         </button>
         <div className="hrCnt">
           <hr />
           또는 <hr />
         </div>
-        <button onClick={onClickFacebookBtn} className="facebookBtn">
+        <button onClick={onClickBtnFacebook} className="facebookBtn">
           <span>
             <img alt="logo" src="/images/dongmin/facebook.png" />
           </span>
@@ -70,8 +111,12 @@ const Login = () => {
       </div>
       <div className="join">
         <span>계정이 없으신가요?</span>
-
-        <a href="https://www.instagram.com/accounts/emailsignup/">가입하기</a>
+        <button
+          onClick={onClickBtnSignup}
+          href="https://www.instagram.com/accounts/emailsignup/"
+        >
+          가입하기
+        </button>
       </div>
       <div className="download">
         <span>앱을 다운로드하세요.</span>
@@ -98,8 +143,8 @@ const Login = () => {
       </div>
       <footer>
         <ul>
-          {FOOTER_INFO_LIST.map(el => (
-            <li key={el.id}>{el.text}</li>
+          {FOOTER_INFO_LIST.map(info => (
+            <li key={info.id}>{info.text}</li>
           ))}
         </ul>
       </footer>

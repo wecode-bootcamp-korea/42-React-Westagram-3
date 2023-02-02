@@ -121,8 +121,9 @@
     border: 1.5px solid rgb(227, 227, 227);
     text-decoration: none;
 
-    a {
-      margin-left: 5px;
+    button {
+      border: 0;
+      background-color: transparent;
       color: rgb(0, 149, 246);
       font-weight: 600;
     }

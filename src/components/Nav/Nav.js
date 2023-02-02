@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Suggestion from './components/Suggestion';
 import './Nav.scss';
 
 const Nav = () => {
+  const [suggestionArr, setSuggestionArr] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/dongmin.json')
+      .then(result => result.json())
+      .then(data => setSuggestionArr(data));
+  }, []);
+
   return (
     <nav>
       <div className="navCnt">
@@ -18,7 +27,14 @@ const Nav = () => {
             <h1 className="navItem">Westagram</h1>
           </li>
         </ul>
-        <input className="navCenter" type="text" placeholder="검색" />
+        <div className="suggertionArrWrap">
+          <input className="navCenter" type="text" placeholder="검색" />
+          <ul>
+            {suggestionArr.map((suggestion, idx) => {
+              return <Suggestion key={suggestion.id} suggestion={suggestion} />;
+            })}
+          </ul>
+        </div>
         <ul className="navRight">
           <li>
             <img

@@ -151,10 +151,11 @@
       width: 40px;
       margin: 0;
       padding: 0;
-      color: skyblue;
+      font-weight: 400;
+      color: rgb(40, 40, 255);
       border: none;
       &:hover {
-        color: blue;
+        font-weight: 700;
       }
     }
   }
