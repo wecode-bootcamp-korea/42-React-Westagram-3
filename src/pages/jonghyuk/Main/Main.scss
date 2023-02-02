@@ -164,12 +164,16 @@
           margin-left: 25px;
           display: flex;
           justify-content: space-between;
-
-          .like {
-            width: 20px;
-            height: 20px;
-            margin-right: 25px;
-            margin-top: 2px;
+          .likeBtn {
+            border: 0;
+            outline: 0;
+            background-color: white;
+            .like {
+              width: 20px;
+              height: 20px;
+              margin-right: 25px;
+              margin-top: 2px;
+            }
           }
         }
 
@@ -180,6 +184,29 @@
         }
         .comment-ul {
           margin-left: 25px;
+
+          .commentWraper {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .newcomment {
+          }
+          .pushLike {
+            width: 20px;
+            height: 20px;
+            margin-right: 25px;
+            margin-top: 2px;
+            float: right;
+          }
+          .deletComment {
+            width: 20px;
+            height: 20px;
+            margin-right: 25px;
+            margin-top: 2px;
+            background-color: white;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -207,7 +234,7 @@
       font-weight: 700;
       background-color: transparent;
       margin-right: 20px;
-      cursor: pointer;
+      cursor: not-allowed;
     }
 
     .changeColorBtn {
@@ -608,10 +635,10 @@
         color: gray;
         margin-top: 15px;
         display: inline;
-        .links{
-        span:after{
-          content: "·"
-        }
+        .links {
+          span:after {
+            content: '·';
+          }
         }
         .watermark {
           margin-top: 15px;

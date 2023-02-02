@@ -1,22 +1,42 @@
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 function Login() {
+  const [id, setId] = useState(' ');
+  const [pw, setPw] = useState(' ');
   const navigate = useNavigate();
 
-  const goToMain = () => {
-    navigate('/main-jonghyuk');
-  };
-
-  const [id, setId] = useState(' ');
   const saveUserId = event => {
     setId(event.target.value);
   };
 
-  const [pw, setPw] = useState(' ');
   const saveUserPw = event => {
     setPw(event.target.value);
+  };
+
+  const goToMain = () => {
+    navigate('/main-jonghyuk');
+    // fetch('http://10.58.52.229:3000/user/signin', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json;charset=utf-8',
+    //   },
+    //   body: JSON.stringify({
+    //     email: id,
+    //     password: pw,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     localStorage.setItem('token', data.accessToken); // 로컬스토리지에 setItem메소드를 이용하여 키는 token 벨류는 data.accessToken(데이터의 accessToken)으로 지정
+    //     if (localStorage.getItem('token') !== 'undefined') {
+    //       // 로컬스토리지에 있는 token을 getItem메서드로 가져오고 token이 undefined가 아니면 페이지 이동
+    //       navigate('/main-jonghyuk');
+    //     } else {
+    //       alert('이이디 또는 비밀번호가 들렸습니다.');
+    //     }
+    //   });
   };
 
   const isDisabled = id.includes('@') && pw.length >= 5;

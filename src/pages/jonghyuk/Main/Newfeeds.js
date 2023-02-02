@@ -3,17 +3,37 @@ import Newcomment from './Newcomment';
 
 const Newfeeds = ({ feedData }) => {
   const [comment, setComment] = useState('');
+  const [commentArray, setCommentArray] = useState([]);
+  const [onClick, setOnClick] = useState(false);
+  const isCommentFilled = comment.length > 0;
+
+  const deletComment = id => {
+    const removeComment = commentArray.filter(comment => comment.id !== id);
+    setCommentArray(removeComment);
+  };
+
+  const onClickLike = () => {
+    setOnClick(prev => {
+      return !prev;
+    });
+  };
+
   const hendleComment = event => {
     setComment(event.target.value);
   };
-  const [commentArray, setCommentArray] = useState([]);
-  const eventComment = () => {
-    const result = [...commentArray, comment];
+
+  const eventComment = e => {
+    e.preventDefault();
+    if (comment === '') {
+      return;
+    }
+    const result = [
+      ...commentArray,
+      { id: commentArray.length + 1, text: comment },
+    ];
     setCommentArray(result);
     setComment('');
   };
-
-  const changeColor = comment.length > 0;
 
   return (
     <section className="leftSection">
@@ -80,12 +100,24 @@ const Newfeeds = ({ feedData }) => {
             <div>
               <b>{feedData.otherUserName}</b> {feedData.comment}
             </div>
-            <img className="like" alt="like" src="images/jonghyuk/heart.png" />
+            <button className="likeBtn" type="button" onClick={onClickLike}>
+              <img
+                className="like"
+                alt="like"
+                src={onClick ? feedData.likeImg : feedData.disLikeImg}
+              />
+            </button>
           </div>
           <div className="lastHour">42분 전</div>
           <ul className="comment-ul">
-            {commentArray.map(function (a, i) {
-              return <Newcomment key={i} comment={a} />;
+            {commentArray.map(function (comment, id) {
+              return (
+                <Newcomment
+                  key={id}
+                  comment={comment}
+                  delComment={deletComment}
+                />
+              );
             })}
           </ul>
           <div className="makeMention">
@@ -97,10 +129,11 @@ const Newfeeds = ({ feedData }) => {
               onChange={hendleComment}
             />
             <input
-              className={changeColor ? 'changeColorBtn' : 'writeBtn'}
+              className={isCommentFilled ? 'changeColorBtn' : 'writeBtn'}
               type="button"
               value="게시"
               onClick={eventComment}
+              disabled={isCommentFilled ? false : true}
             />
           </div>
         </div>

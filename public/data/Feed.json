@@ -11,6 +11,8 @@
           "imgUrl": "images/jonghyuk/feedimg.jpg"
         }
       ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
       "content": "역시 겨울에는 동남아 휴양지...",
       "comment": "거봐 좋았잖아~~~~"
     },
@@ -24,6 +26,8 @@
           "imgUrl": "images/jonghyuk/feedimg1.jpg"
         }
       ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
       "content": "향수"
     },
     {
@@ -36,6 +40,8 @@
           "imgUrl": "images/jonghyuk/feedimg2.jpg"
         }
       ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
       "content": "기도",
       "comment": "god bless you"
     },
@@ -49,6 +55,8 @@
           "imgUrl": "images/jonghyuk/feedimg3.jpg"
         }
       ],
+      "likeImg" : "images/jonghyuk/fullheart.png",
+      "disLikeImg" : "images/jonghyuk/heart.png",
       "content": "신발"
     }
   ]
