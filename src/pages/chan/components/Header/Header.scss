@@ -3,37 +3,37 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   height: 55px;
   background: #fff;
   border-bottom: 1px solid #dbdbdb;
 }
 
-.header .inner {
+.inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
-.header .inner .nav .link_list li a {
+.link_list li a {
   display: block;
   margin: 5px;
 }
 
-.header .inner .nav .link_list li a i {
+.link_list li a i {
   color: #000;
   font-size: 30px;
 }
 
-.header .inner .logo a img {
+.logo a img {
   width: 100px;
   display: block;
 }
-.header .inner .input_box {
+.input_box {
   width: 200px;
   height: 30px;
 }
-.header .inner .input_box input {
+.input_box input {
   height: 100%;
   width: 100%;
   padding: 0 32px;
@@ -44,22 +44,20 @@
   background: none;
   border-radius: 5px;
 }
-
-.header .inner .input_box input::placeholder {
+.input_box input::placeholder {
   text-align: center;
   font-size: 13px;
 }
-.header .inner .input_box input:focus::-webkit-input-placeholder {
+.input_box input:focus::-webkit-input-placeholder {
   color: transparent;
 }
-.header .inner .nav {
-}
-.header .inner .nav .link_list {
+
+.link_list {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.header .inner .nav .link_list a img {
+.link_list a img {
   width: 50%;
 }

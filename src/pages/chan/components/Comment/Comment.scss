@@ -1,6 +1,8 @@
 .Comment {
   width: 540px;
+  height: 100%;
   padding: 0px 10px 10px 10px;
+
   // border: 2px solid #dbdbdb;
   margin: auto;
 }
@@ -22,8 +24,10 @@
 .Comment form input {
   width: 85%;
   height: 30px;
-  outline: none;
-  border: none;
+  // outline: none;
+  outline-color: rgb(112, 153, 236);
+  margin-right: 5px;
+  border: solid 1px rgb(95, 93, 93);
   resize: none;
   line-height: 25px;
   text-indent: 5px;
@@ -35,6 +39,7 @@
   outline: none;
   border: none;
   background-color: #0095f6;
+  border-radius: 3px;
 }
 
 .Comment form [type='submit']:disabled {

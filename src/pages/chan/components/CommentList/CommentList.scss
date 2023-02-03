@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.userCommentBox {
+.CommentListBox {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -16,4 +16,21 @@
 .userName {
   font-weight: bold;
   margin-right: 10px;
+}
+
+// .CommentRight {
+//   display: flex;
+// }
+
+.CommentRight i {
+  margin-left: 10px;
+  font-size: 90%;
+}
+
+.likebtn {
+  all: unset;
+}
+
+.trashbtn {
+  all: unset;
 }

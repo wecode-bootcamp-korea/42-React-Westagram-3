@@ -1,0 +1,28 @@
+.footer {
+  height: 100px;
+  width: 430px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.footer li {
+  float: left;
+  margin-bottom: 5px;
+  &::after {
+    margin-left: 7px;
+    margin-right: 7px;
+    color: rgb(174, 171, 171);
+    content: '・';
+  }
+}
+
+.footer li:last-child {
+  &::after {
+    content: none;
+  }
+}
+
+.footer li a {
+  text-decoration: none;
+  color: rgb(174, 171, 171);
+}

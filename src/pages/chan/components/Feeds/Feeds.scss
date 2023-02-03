@@ -2,12 +2,11 @@
   box-sizing: border-box;
 }
 
-.profile_image {
-  margin: 10px;
-  font-weight: bold;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.Feed {
+  border: 2px solid #ced4da;
+  margin-top: 20px;
+  background-color: white;
+  height: 100%;
 }
 
 .feed_profile {
@@ -15,7 +14,15 @@
   align-items: center;
 }
 
-.profile_id {
+.feed_profile_image {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.feed_profile_id {
   width: 100%;
   height: 30px;
   margin: 20px auto 0px auto;
@@ -24,19 +31,10 @@
   padding-left: 10px;
 }
 
-.feed_id_add {
-  background-color: transparent !important;
-  background-image: none !important;
-  border-color: transparent;
-  border: none;
-
-  color: #ffffff;
-}
-
 .feed_photo {
   width: 100%;
   height: 540px;
-  margin: 10px auto;
+  // margin: 10px auto;
 }
 
 .feed_photo img {
@@ -44,18 +42,19 @@
   height: 100%;
   object-fit: cover;
 }
-.article-bottom {
+.feed_bottom {
   width: 100%;
+  margin-top: 10px;
 }
 
-.article-links {
+.feed_links {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
 }
 
-.article-links-left i {
+.feed_links_left i {
   font-size: 25px;
   font-weight: normal;
   width: 25px;
@@ -63,28 +62,28 @@
   margin-right: 10px;
 }
 
-.article-links-left i:last-child {
+.feed_links_left i:last-child {
   margin-right: 0;
 }
 
-.article-links-right i {
+.feed_links_right i {
   font-size: 25px;
   font-weight: normal;
   width: 25px;
   height: 25px;
 }
 
-.article-bottom-like {
+.feed_bottom_like {
   width: 100%;
   padding: 10px;
 }
 
-.like-profile {
+.feed_bottom_like_profile {
   display: flex;
   align-items: center;
 }
 
-.like_profile_image {
+.feed_bottom_like_profile_image {
   margin: 10px;
   font-weight: bold;
   width: 40px;
@@ -92,6 +91,17 @@
   border-radius: 50%;
 }
 
-.article-bold {
+.feed_bottom_like_comment {
   font-weight: bold;
+}
+
+.userName {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.feed_comment {
+  display: flex;
+  padding: 5px;
+  width: 100%;
 }

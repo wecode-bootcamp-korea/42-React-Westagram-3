@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "seung_chann",
+    "img": "images/chan/swim.jpg",
+    "postImg": "images/chan/flower.PNG",
+    "defaultComment1": "우왕 꽃이당 🌸 ",
+    "defaultComment2": "안녕"
+  },
+  {
+    "id": 2,
+    "name": "nemonemo__12",
+    "img": "images/chan/story4.jpg",
+    "postImg": "images/chan/sky1.jpg",
+    "defaultComment1": "에펠탑 🇫🇷🇫🇷🇫🇷",
+    "defaultComment2": "안녕"
+  },
+  {
+    "id": 3,
+    "name": "sehann_a1",
+    "img": "images/chan/story3.png",
+    "postImg": "images/chan/sky2.jpg",
+    "defaultComment1": "멋지다 🖤🖤🖤🖤🖤",
+    "defaultComment2": "안녕"
+  }
+]

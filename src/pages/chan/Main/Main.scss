@@ -8,24 +8,15 @@
 .Contents {
   margin-top: 50px;
   padding: 20px;
-  height: 100vh;
-  background: #f9f8f8;
-  display: flex;
-  justify-content: center;
+  height: auto;
+  background: #f5f4f4;
   width: 100%;
-  overflow: auto;
-}
-
-.Left {
-  z-index: 1;
-  top: 10px;
-  left: 80px;
-  width: 700px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .article {
-  z-index: 1;
-  border: solid 2px rgb(220, 218, 221);
   width: 540px;
-  margin: 10px auto;
+  // background: white;
+  margin-top: 20px;
 }

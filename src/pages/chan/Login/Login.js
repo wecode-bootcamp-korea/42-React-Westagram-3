@@ -9,9 +9,56 @@ function Login() {
   const [btnState, setBtnState] = useState(true);
 
   const goToMain = e => {
-    // 온서브밋 이벤트 발생시 메인으로 이동!
-    e.preventDefault();
+    // fetch('http://10.58.52.201:3000/users/login', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json;charset=utf-8',
+    //     // Authorization: token,
+    //   },
+    //   body: JSON.stringify({
+    //     email: inputId,
+    //     password: inputPw,
+    //   }),
+    // })
+    //   .then(response => {
+    //     console.log(response);
+    //     return response.json();
+    //   })
+
+    //   .catch(error => {
+    //     console.log(error);
+    //   })
+
+    //   .then(response => {
+    //     // console.log('response:', response);
+    //     if (response.accessToken) {
+    //       localStorage.setItem('accessToken', response.accessToken);
+    //       navigate('/main-chan');
+    //     } else {
+    //       alert(response.message);
+    //     }
+    //   });
     navigate('/main-chan');
+    e.preventDefault();
+    // fetch('http://10.58.52.201:3000/users/signup', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json;charset=utf-8',
+    //   },
+    //   body: JSON.stringify({
+    //     name: '승찬',
+    //     email: inputId,
+    //     password: inputPw,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => console.log(result));
+
+    // accessToken.then(accessToken => {
+    //   console.log(accessToken);
+    // });
+
+    // 온서브밋 이벤트 발생시 메인으로 이동!
   };
 
   const handleIdInput = e => {

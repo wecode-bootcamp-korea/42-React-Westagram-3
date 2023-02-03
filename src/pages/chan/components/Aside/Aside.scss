@@ -1,9 +1,9 @@
 aside {
-  z-index: 4;
-  top: 10px;
-  right: 80px;
-  height: 945px;
-  width: 700px;
+  height: 745px;
+  width: 540px;
+
+  position: sticky;
+  top: 70px;
 }
 
 .side-profile {
@@ -17,24 +17,24 @@ aside {
   padding-left: 10px;
 }
 .story-box {
-  border: 1px solid #ced4da;
+  border: 2px solid #ced4da;
   height: 300px;
   width: 500px;
   background-color: #ffffff;
   margin: 10px auto;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   padding-left: 10px;
   padding-top: 15px;
   overflow: auto;
 }
 .recommand-box {
-  border: 1px solid #ced4da;
+  border: 2px solid #ced4da;
   height: 300px;
   width: 500px;
   background-color: #ffffff;
   margin: 10px auto;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   padding-left: 10px;
   padding-top: 15px;
@@ -64,12 +64,4 @@ aside {
 .story-person {
   display: flex;
   align-items: center;
-}
-.last-box {
-  height: 100px;
-  width: 500px;
-  margin: 20px auto;
-  font-size: 15px;
-  padding-left: 10px;
-  text-align: center;
 }

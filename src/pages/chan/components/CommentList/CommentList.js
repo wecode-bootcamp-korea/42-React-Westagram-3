@@ -1,16 +1,22 @@
 import { React } from 'react';
 import './CommentList.scss';
 
-function CommentList({ userName, userComment }) {
+function CommentList({ userName, onRemove, commentArr }) {
+  const { id, text } = commentArr;
   return (
     <div className="CommentList">
-      <div className="userCommentBox">
+      <div className="CommentListBox">
         <div className="CommentLeft">
           <p className="userName">{userName}</p>
-          <div className="userComment">{userComment}</div>
+          <div className="userComment">{text}</div>
         </div>
         <div className="CommentRight">
-          <i className="far fa-heart"></i>
+          <button className="likebtn">
+            <i className="far fa-heart"></i>
+          </button>
+          <button className="trashbtn" onClick={() => onRemove(id)}>
+            <i className="fa-solid fa-trash-can"></i>
+          </button>
         </div>
       </div>
     </div>

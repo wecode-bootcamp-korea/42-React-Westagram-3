@@ -6,20 +6,35 @@ function Comment() {
   const [userName] = useState('JinHee');
   const [comment, setComment] = useState('');
   const [feedCommets, setFeedComments] = useState([]);
-  const [isValid, setIsValid] = useState(false);
+  const isValid = comment.length !== 0;
+
   const post = e => {
     e.preventDefault();
-    const copyFeedComments = [...feedCommets];
-    copyFeedComments.push(comment);
-    setFeedComments(copyFeedComments);
+    setFeedComments(currentArray => [
+      ...currentArray,
+      { id: Date.now(), text: comment },
+    ]);
     setComment('');
+  };
+
+  const onRemove = id => {
+    setFeedComments(
+      feedCommets.filter(comment => {
+        return comment.id !== id;
+      })
+    );
   };
 
   return (
     <div className="Comment">
-      {feedCommets.map((commentArr, i) => {
+      {feedCommets.map((commentArr, id) => {
         return (
-          <CommentList userName={userName} userComment={commentArr} Key={i} />
+          <CommentList
+            userName={userName}
+            commentArr={commentArr}
+            Key={id}
+            onRemove={onRemove}
+          />
         );
       })}
       <form onSubmit={post}>
@@ -34,9 +49,6 @@ function Comment() {
           onChange={e => {
             setComment(e.target.value);
           }}
-          onKeyUp={e => {
-            e.target.value.length > 0 ? setIsValid(true) : setIsValid(false);
-          }}
           value={comment}
         />
         <button
@@ -45,7 +57,7 @@ function Comment() {
           className={
             comment.length > 0 ? 'submitCommentActive' : 'submitCommentInactive'
           }
-          disabled={isValid ? false : true}
+          disabled={!isValid}
         >
           게시
         </button>
