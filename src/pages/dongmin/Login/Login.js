@@ -7,12 +7,12 @@ const Login = () => {
 
   const { id, pw } = input;
 
-  const loginUrl = 'http://10.58.52.229:3000/user/signin';
+  // const loginUrl = 'http://10.58.52.229:3000/user/signin';
   const signupUrl = 'http://10.58.52.229:3000/user/signup';
 
   const navigate = useNavigate();
 
-  const isValid = id.length >= 5 && pw.length >= 5 && pw.includes('@');
+  const isValid = id.length >= 5 && id.includes('@') && pw.length >= 5;
 
   const onChangeInput = e => {
     const { name, value } = e.target;
@@ -42,25 +42,27 @@ const Login = () => {
   };
 
   const onClickBtnLogin = () => {
-    fetch(loginUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({
-        email: id,
-        password: pw,
-      }),
-    })
-      .then(response => response.json())
-      .then(result => {
-        localStorage.setItem('token', result.accessToken);
-        if (localStorage.getItem('token') !== 'undefined') {
-          return navigate('/main-dongmin');
-        } else {
-          alert('입력이 틀렸습니다');
-        }
-      });
+    // 통신 Test용 코드
+    // fetch(loginUrl, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json;charset=utf-8',
+    //   },
+    //   body: JSON.stringify({
+    //     email: id,
+    //     password: pw,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => {
+    //     localStorage.setItem('token', result.accessToken);
+    //     if (localStorage.getItem('token') !== 'undefined') {
+    //       return navigate('/main-dongmin');
+    //     } else {
+    //       alert('입력이 틀렸습니다');
+    //     }
+    //   });
+    navigate('/main-dongmin');
   };
 
   const onClickBtnFacebook = () => {

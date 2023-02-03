@@ -21,7 +21,7 @@ const Main = () => {
           {feedList.map(feed => {
             return (
               <li key={feed.id}>
-                <Feed feed={feed} />
+                <Feed props={feed} />
               </li>
             );
           })}

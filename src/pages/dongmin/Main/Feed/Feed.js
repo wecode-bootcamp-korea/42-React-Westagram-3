@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Comment from './Components/Comment';
 import './Feed.scss';
 
-const Feeds = ({ props }) => {
+const Feed = ({ props }) => {
   const [input, setInput] = useState('');
-
-  const [commentsList, setCommentsList] = useState([]);
+  console.log(props);
+  console.log({ props });
+  const [commentList, setCommentList] = useState([]);
 
   const {
     profileImg,
@@ -22,8 +23,8 @@ const Feeds = ({ props }) => {
   };
 
   const changeLiked = idxOfChangingLiked => e => {
-    setCommentsList(
-      commentsList.map((comment, idx) => {
+    setCommentList(
+      commentList.map((comment, idx) => {
         if (idx === idxOfChangingLiked) comment.isLiked = !comment.isLiked;
         return comment;
       })
@@ -31,8 +32,8 @@ const Feeds = ({ props }) => {
   };
 
   const deleteComment = idxOfBeingDeleted => e => {
-    setCommentsList(
-      commentsList.filter((comment, idx) => {
+    setCommentList(
+      commentList.filter((comment, idx) => {
         return idx !== idxOfBeingDeleted;
       })
     );
@@ -40,18 +41,18 @@ const Feeds = ({ props }) => {
 
   const onSubmit = e => {
     const comment = {
-      id: commentsList.length + 1,
+      id: commentList.length + 1,
       name: 'gmgmgun',
       content: input,
       isLiked: false,
     };
-    setCommentsList([...commentsList, comment]);
+    setCommentList([...commentList, comment]);
     setInput('');
     e.preventDefault();
   };
 
   return (
-    <div className="feeds">
+    <div className="feed">
       <article>
         <div className="profileCnt">
           <img className="profileImg" alt="logo" src={profileImg} />
@@ -120,7 +121,7 @@ const Feeds = ({ props }) => {
         </div>
         <div>
           <ul>
-            {commentsList.map((comment, idx) => (
+            {commentList.map((comment, idx) => (
               <Comment
                 key={comment.id}
                 index={idx}
@@ -149,4 +150,4 @@ const Feeds = ({ props }) => {
   );
 };
 
-export default Feeds;
+export default Feed;

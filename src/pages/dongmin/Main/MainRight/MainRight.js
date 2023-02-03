@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './Components/ProfileCard';
 import './MainRight.scss';
+
 const MainRight = () => {
   return (
     <div className="mainRight">

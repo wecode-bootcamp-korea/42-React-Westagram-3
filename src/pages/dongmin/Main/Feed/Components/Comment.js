@@ -1,8 +1,8 @@
 import React from 'react';
 import './Comment.scss';
 
-const Comment = comment => {
-  const { index, name, content, isLiked, changeLiked, deleteComment } = comment;
+const Comment = props => {
+  const { index, name, content, isLiked, changeLiked, deleteComment } = props;
 
   return (
     <li className="comment">
