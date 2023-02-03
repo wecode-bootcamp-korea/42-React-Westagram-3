@@ -4,13 +4,12 @@ nav {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
-
+  z-index: 200;
   .navCnt {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    border-bottom: 1px solid rgb(245, 245, 245);
     .navItem {
       display: flex;
       align-items: center;
@@ -30,19 +29,13 @@ nav {
         align-items: center;
       }
     }
-    .navCenter {
-      border: 1px solid rgb(240, 240, 240);
-      background-color: rgb(250, 250, 250);
-    }
-    .suggertionArrWrap {
-      :not(input) {
-        display: none;
-      }
-
+    .suggestionArrWrap {
       input {
+        // position: sticky;
         width: 300px;
         height: 30px;
-        border: none;
+        border: 1px solid rgb(240, 240, 240);
+        background-color: rgb(250, 250, 250);
 
         &::placeholder {
           opacity: 0.5;
@@ -53,6 +46,12 @@ nav {
           background-size: 12px;
           content: ‘검색’;
         }
+      }
+
+      .suggestionArr {
+        position: fixed;
+        width: 300px;
+        z-index: 200;
       }
     }
 

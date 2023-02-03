@@ -3,6 +3,9 @@
   //visibility: hidden;
   .suggestionWrap {
     display: flex;
+    padding: 5px;
+    border: 1px solid rgb(227, 227, 227);
+    background-color: rgb(255, 255, 255);
     .profileImg {
       width: 30px;
       height: 30px;

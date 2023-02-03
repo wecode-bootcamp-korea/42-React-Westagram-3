@@ -5,6 +5,16 @@ import './Nav.scss';
 const Nav = () => {
   const [suggestionArr, setSuggestionArr] = useState([]);
 
+  const [inputSearch, setInputSearch] = useState('');
+
+  const filterText = searchStr => {
+    return searchStr.includes(inputSearch);
+  };
+
+  const onChangeSearch = e => {
+    setInputSearch(e.target.value);
+  };
+
   useEffect(() => {
     fetch('/data/dongmin.json')
       .then(result => result.json())
@@ -27,12 +37,40 @@ const Nav = () => {
             <h1 className="navItem">Westagram</h1>
           </li>
         </ul>
-        <div className="suggertionArrWrap">
-          <input className="navCenter" type="text" placeholder="검색" />
-          <ul>
+        <div className="suggestionArrWrap">
+          <input
+            className="navCenter"
+            type="text"
+            placeholder="검색"
+            onChange={onChangeSearch}
+            value={inputSearch}
+          />
+          <ul className="suggestionArr">
             {suggestionArr.map((suggestion, idx) => {
               return <Suggestion key={suggestion.id} suggestion={suggestion} />;
             })}
+            {/* {inputSearch ? (
+              suggestionArr.map(suggestion => (
+                <Suggestion
+                  key={suggestion.id}
+                  suggestion={suggestion}
+                  inputSearch={inputSearch}
+                  filterText={filterText}
+                />
+              ))
+              suggestionArr.filter(suggestion =>
+                suggestion.profileText[1].includes(inputSearch)
+                  ?  <Suggestion
+                  key={suggestion.id}
+                  suggestion={suggestion}
+                  inputSearch={inputSearch}
+                  filterText={filterText}
+                />
+                  : void 0
+              )
+            ) : (
+              <div></div>
+            )} */}
           </ul>
         </div>
         <ul className="navRight">

@@ -1,8 +1,12 @@
 import React from 'react';
 import './Suggestion.scss';
 
-const Suggestion = ({ suggestion }) => {
+const Suggestion = props => {
+  const { suggestion, inputSearch, filterText } = props;
   const { profileImg, profileText } = suggestion;
+  const includeInputSearch = () => {
+    filterText(profileText[1]);
+  };
   return (
     <li className="suggestion">
       <div className="suggestionWrap">
