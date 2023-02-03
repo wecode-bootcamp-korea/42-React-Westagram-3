@@ -46,10 +46,10 @@ const Nav = () => {
             value={inputSearch}
           />
           <ul className="suggestionArr">
-            {suggestionArr.map((suggestion, idx) => {
+            {/* {suggestionArr.map((suggestion, idx) => {
               return <Suggestion key={suggestion.id} suggestion={suggestion} />;
-            })}
-            {/* {inputSearch ? (
+            })} */}
+            {inputSearch ? (
               suggestionArr.map(suggestion => (
                 <Suggestion
                   key={suggestion.id}
@@ -58,19 +58,19 @@ const Nav = () => {
                   filterText={filterText}
                 />
               ))
-              suggestionArr.filter(suggestion =>
-                suggestion.profileText[1].includes(inputSearch)
-                  ?  <Suggestion
-                  key={suggestion.id}
-                  suggestion={suggestion}
-                  inputSearch={inputSearch}
-                  filterText={filterText}
-                />
-                  : void 0
-              )
             ) : (
+              // suggestionArr.filter(suggestion =>
+              //   suggestion.profileText[1].includes(inputSearch)
+              //     ?  <Suggestion
+              //     key={suggestion.id}
+              //     suggestion={suggestion}
+              //     inputSearch={inputSearch}
+              //     filterText={filterText}
+              //   />
+              //     : void 0
+              // )
               <div></div>
-            )} */}
+            )}
           </ul>
         </div>
         <ul className="navRight">
