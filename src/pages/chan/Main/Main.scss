@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+.Main {
+  height: 100%;
+}
+
+.Contents {
+  margin-top: 50px;
+  padding: 20px;
+  height: auto;
+  background: #f5f4f4;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.article {
+  width: 540px;
+  // background: white;
+  margin-top: 20px;
+}

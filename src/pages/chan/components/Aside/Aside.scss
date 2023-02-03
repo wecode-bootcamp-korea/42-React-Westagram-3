@@ -1,0 +1,67 @@
+aside {
+  height: 745px;
+  width: 540px;
+
+  position: sticky;
+  top: 70px;
+}
+
+.side-profile {
+  height: 100px;
+  width: 500px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.story-box {
+  border: 2px solid #ced4da;
+  height: 300px;
+  width: 500px;
+  background-color: #ffffff;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 15px;
+  overflow: auto;
+}
+.recommand-box {
+  border: 2px solid #ced4da;
+  height: 300px;
+  width: 500px;
+  background-color: #ffffff;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 15px;
+  overflow: auto;
+}
+
+.side_profile_image {
+  margin: 10px;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  display: block;
+  border-radius: 50%;
+}
+
+.story_person_image {
+  margin: 10px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: block;
+  border-radius: 50%;
+}
+
+.story-person {
+  display: flex;
+  align-items: center;
+}
