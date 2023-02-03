@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './Feeds.scss';
 import Comment from './Components/Comment';
+import './Feed.scss';
 
-const Feeds = ({ feed }) => {
+const Feeds = ({ props }) => {
   const [input, setInput] = useState('');
 
   const [commentsList, setCommentsList] = useState([]);
@@ -15,13 +15,13 @@ const Feeds = ({ feed }) => {
     content,
     likeProfileImg,
     likeProfileText,
-  } = feed;
+  } = props;
 
   const changeInput = e => {
     setInput(e.target.value);
   };
 
-  const changeLiked = idxOfChangingLiked => {
+  const changeLiked = idxOfChangingLiked => e => {
     setCommentsList(
       commentsList.map((comment, idx) => {
         if (idx === idxOfChangingLiked) comment.isLiked = !comment.isLiked;
@@ -30,7 +30,7 @@ const Feeds = ({ feed }) => {
     );
   };
 
-  const deleteComment = idxOfBeingDeleted => {
+  const deleteComment = idxOfBeingDeleted => e => {
     setCommentsList(
       commentsList.filter((comment, idx) => {
         return idx !== idxOfBeingDeleted;

@@ -2,15 +2,7 @@ import React from 'react';
 import './Comment.scss';
 
 const Comment = comment => {
-  const { index, name, content, isLiked, deleteComment, changeLiked } = comment;
-
-  const onBtnClickedLike = () => {
-    changeLiked(index);
-  };
-
-  const onBtnClickedDelete = () => {
-    deleteComment(index);
-  };
+  const { index, name, content, isLiked, changeLiked, deleteComment } = comment;
 
   return (
     <li className="comment">
@@ -19,7 +11,12 @@ const Comment = comment => {
         <span className="content">{content}</span>
       </div>
       <div className="btnCnt">
-        <button className="like" onClick={onBtnClickedLike}>
+        <button
+          className="like"
+          onClick={() => {
+            changeLiked(index);
+          }}
+        >
           <img
             alt="like"
             src={
@@ -29,7 +26,12 @@ const Comment = comment => {
             }
           />
         </button>
-        <button className="delete" onClick={onBtnClickedDelete}>
+        <button
+          className="delete"
+          onClick={() => {
+            deleteComment(index);
+          }}
+        >
           <img alt="delete" src="/images/dongmin/delete.png" />
         </button>
       </div>

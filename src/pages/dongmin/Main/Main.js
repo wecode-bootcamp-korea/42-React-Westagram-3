@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import Feeds from './Feeds/Feeds';
+import Feed from './Feed/Feed';
 import MainRight from './MainRight/MainRight';
 import './Main.scss';
+import Nav from '../../../components/Nav/Nav';
 
 const Main = () => {
-  const [feedsArr, setFeedsArr] = useState([]);
+  const [feedList, setFeedList] = useState([]);
 
   useEffect(() => {
     fetch('/data/dongmin.json')
       .then(result => result.json())
-      .then(data => setFeedsArr(data));
+      .then(data => setFeedList(data));
   }, []);
 
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
       <main>
         <ul>
-          {feedsArr.map(feed => {
+          {feedList.map(feed => {
             return (
               <li key={feed.id}>
-                <Feeds feed={feed} />
+                <Feed feed={feed} />
               </li>
             );
           })}
