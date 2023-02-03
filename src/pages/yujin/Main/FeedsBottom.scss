@@ -6,12 +6,16 @@
   margin-right: 300px;
   padding-right: 300px;
   margin-bottom: 850px;
+  .feeds_bottom_container {
+    width: 170%;
+    height: 150px;
+  }
 }
 
-.feeds_bottom_container {
-  width: 170%;
-  height: 150px;
-}
+// .feeds_bottom_container {
+//   width: 170%;
+//   height: 150px;
+// }
 
 .feeds_except_comment {
   margin-left: 20px;

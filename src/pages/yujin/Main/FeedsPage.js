@@ -2,11 +2,7 @@ import React from 'react';
 import Feeds from './Feeds';
 
 function FeedsPage() {
-  return (
-    <div>
-      <Feeds />
-    </div>
-  );
+  return <Feeds />;
 }
 
 export default FeedsPage;
