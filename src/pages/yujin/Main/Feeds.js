@@ -12,11 +12,10 @@ function Feeds(props) {
     firstComment,
     userName,
     likeCount,
+    uploadTime,
   } = props;
 
   const feedsImage = 'https://cdn-icons-png.flaticon.com/128/2354/2354557.png';
-
-  const uploadTime = '30초';
 
   return (
     <div>
