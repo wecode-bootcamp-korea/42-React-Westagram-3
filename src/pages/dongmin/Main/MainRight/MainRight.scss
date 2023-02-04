@@ -1,0 +1,167 @@
+.mainRight {
+  margin-left: 2px;
+  width: 200px;
+  height: 300px;
+  background-color: rgb(250, 250, 250);
+
+  .sticky {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15px;
+    top: 0;
+    span {
+      &:nth-child(1) {
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+    }
+  }
+
+  .showAll {
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .profileCnt {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    overflow: hidden;
+    .profileImg {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .profileText li {
+      &:nth-child(1) {
+        font-size: 12px;
+      }
+      &:nth-child(2) {
+        font-size: 6px;
+      }
+    }
+  }
+
+  .storyWrap {
+    position: relative;
+    border: 2px solid rgb(245, 245, 245);
+    padding: 8px 8px 0px 8px;
+    background-color: white;
+    font-size: 10px;
+
+    .storyLi {
+      height: 210px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .sideProfileCnt {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+
+        .sideProfileImg {
+          width: 30px;
+          height: 30px;
+          margin-right: 7px;
+          border-radius: 50%;
+        }
+
+        .sideProfileText {
+          display: block;
+          overflow: hidden;
+
+          li {
+            &:nth-child(1) {
+              font-size: 13px;
+              margin: 0;
+            }
+
+            &:nth-child(2) {
+              font-size: 10px;
+              margin: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .recommendWrap {
+    position: relative;
+    border: 2px solid rgb(245, 245, 245);
+    padding: 8px 8px 0px 8px;
+    background-color: white;
+    font-size: 10px;
+
+    .storyLi {
+      height: 210px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .sideProfileCnt {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+
+        .sideProfileImg {
+          width: 30px;
+          height: 30px;
+          margin-right: 7px;
+          border-radius: 50%;
+        }
+
+        .sideProfileText {
+          display: block;
+          overflow: hidden;
+
+          li {
+            &:nth-child(1) {
+              font-size: 13px;
+              margin: 0;
+            }
+
+            &:nth-child(2) {
+              font-size: 10px;
+              margin: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    opacity: 0.5;
+    li {
+      float: left;
+      margin: 0;
+      font-size: 11px;
+
+      &:not(:last-child)::after {
+        content: '•';
+      }
+    }
+
+    span {
+      margin-top: 5px;
+      font-size: 7px;
+    }
+  }
+}

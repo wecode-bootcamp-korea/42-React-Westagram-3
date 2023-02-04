@@ -1,25 +1,27 @@
 nav {
   position: sticky;
   width: 100%;
-  border-bottom: 2px solid rgb(245, 245, 245);
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
-  .nav-cnt {
+  z-index: 200;
+  .navCnt {
     display: flex;
     justify-content: space-around;
-    .nav-item {
+    align-items: center;
+    height: 50px;
+    .navItem {
       display: flex;
       align-items: center;
-      width: 15px;
-      height: 15px;
-      font-size: 15px;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
       margin: 0;
     }
-    .nav-right img {
+    .navRight img {
       margin: auto 5px;
     }
-    .nav-left {
+    .navLeft {
       display: flex;
       align-items: center;
       li {
@@ -27,30 +29,40 @@ nav {
         align-items: center;
       }
     }
-    .nav-center {
-      border: 1px solid rgb(240, 240, 240);
-      background-color: rgb(250, 250, 250);
-    }
-    input {
-      border: none;
-      &::placeholder {
-        opacity: 0.5;
-        text-align: center;
-        vertical-align: center;
-        background: url(../../assets/dongmin/search.png) no-repeat;
-        background-position: 44px;
-        background-size: 12px;
-        content: ‘검색’;
+    .suggestionArrWrap {
+      input {
+        // position: sticky;
+        width: 300px;
+        height: 30px;
+        border: 1px solid rgb(240, 240, 240);
+        background-color: rgb(250, 250, 250);
+
+        &::placeholder {
+          opacity: 0.5;
+          text-align: center;
+          vertical-align: center;
+          background: url(../../assets/dongmin/search.png) no-repeat;
+          background-position: 121px;
+          background-size: 12px;
+          content: ‘검색’;
+        }
+      }
+
+      .suggestionArr {
+        position: fixed;
+        width: 300px;
+        z-index: 200;
       }
     }
-    .nav-right {
+
+    .navRight {
       display: flex;
       li {
         display: flex;
         align-items: center;
       }
     }
-    .line-vertical {
+    .lineVertical {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,5 +71,11 @@ nav {
       font-family: ‘Lobster’, cursive;
       font-size: 13px;
     }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .navLeft {
+    visibility: hidden;
   }
 }

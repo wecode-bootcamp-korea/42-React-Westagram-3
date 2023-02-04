@@ -1,0 +1,31 @@
+.suggestion {
+  //display: none;
+  //visibility: hidden;
+  .suggestionWrap {
+    display: flex;
+    padding: 5px;
+    border: 1px solid rgb(227, 227, 227);
+    background-color: rgb(255, 255, 255);
+    .profileImg {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .profileText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 8px;
+      span {
+        &:nth-child(1) {
+          font-size: 15px;
+        }
+        &:nth-child(2) {
+          font-size: 12px;
+          font-weight: 600;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
